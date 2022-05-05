@@ -29,24 +29,24 @@ const Home = (props) => {
             <div className="contenedorTipos">
 
                 <div className="bloque1Tipos">
-                    <div className="bloque1Tipos1" onClick={()=>navegar("/:genero","ensalada")}>ENSALADA</div>
-                    <div className="bloque1Tipos2" onClick={()=>navegar("/:genero","animacion")}>ASADO</div>
-                    <div className="bloque1Tipos3" onClick={()=>navegar("/:genero","belico")}>SALSA</div>
-                    <div className="bloque1Tipos4" onClick={()=>navegar("/:genero","ciencia")}>CRUJIENTE</div>
+                    <div className="bloque1Tipos1" onClick={()=>navegar("/:tipo","ensalada")}>ENSALADA</div>
+                    <div className="bloque1Tipos2" onClick={()=>navegar("/:tipo","asado")}>ASADO</div>
+                    <div className="bloque1Tipos3" onClick={()=>navegar("/:tipo","salsa")}>SALSA</div>
+                    <div className="bloque1Tipos4" onClick={()=>navegar("/:tipo","crujiente")}>CRUJIENTE</div>
                 </div>
 
                 <div className="bloque2Tipos">
-                    <div className="bloque2Tipos1" onClick={()=>navegar("/:genero","clasicos")}>CRUDO</div>
-                    <div className="bloque2Tipos2" onClick={()=>navegar("/:genero","comedia")}>VEGANO</div>
-                    <div className="bloque2Tipos3" onClick={()=>navegar("/:genero","documental")}>PICANTE</div>
-                    <div className="bloque2Tipos4" onClick={()=>navegar("/:genero","drama")}>ESPECIADO</div>
+                    <div className="bloque2Tipos1" onClick={()=>navegar("/:tipo","crudo")}>CRUDO</div>
+                    <div className="bloque2Tipos2" onClick={()=>navegar("/:tipo","vegano")}>VEGANO</div>
+                    <div className="bloque2Tipos3" onClick={()=>navegar("/:tipo","picante")}>PICANTE</div>
+                    <div className="bloque2Tipos4" onClick={()=>navegar("/:tipo","especiado")}>ESPECIADO</div>
                 </div>
 
                 <div className="bloque3Tipos">
-                    <div className="bloque3Tipos1" onClick={()=>navegar("/:genero","infantil")}>PESCADO</div>
-                    <div className="bloque3Tipos2" onClick={()=>navegar("/:genero","musical")}>CARNE</div>
-                    <div className="bloque3Tipos3" onClick={()=>navegar("/:genero","romantica")}>PLANCHA</div>
-                    <div className="bloque3Tipos4" onClick={()=>navegar("/:genero","terror")}>COCIDO</div>
+                    <div className="bloque3Tipos1" onClick={()=>navegar("/:tipo","pescado")}>PESCADO</div>
+                    <div className="bloque3Tipos2" onClick={()=>navegar("/:tipo","carne")}>CARNE</div>
+                    <div className="bloque3Tipos3" onClick={()=>navegar("/:tipo","plancha")}>PLANCHA</div>
+                    <div className="bloque3Tipos4" onClick={()=>navegar("/:tipo","cocido")}>COCIDO</div>
                 </div>
 
                
