@@ -1,0 +1,88 @@
+
+
+.contenedorHeader {
+    background-color: #060613;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5em;
+    font-size: 17px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    
+
+}
+
+.logo {
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 7em;
+    border-radius: 1em;
+    border: 2px solid white;
+    color: #000000;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+.secciones {
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 25em;
+    border-radius: 1em;
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+    margin-right: 35em;
+    
+   }
+
+.textoSecciones {
+    font-size: 17px;
+}
+
+.textoSecciones:hover {
+    font-size: 20px;
+}
+
+.entrar {
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 15em;
+    border-radius: 1em;
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+}
+
+.registro {
+    font-size: 17px;
+}
+
+.registro:hover{
+    font-size :20px
+}
+
+.acceso {
+    font-size: 17px;
+}
+
+.acceso:hover {
+   font-size: 20px;
+}

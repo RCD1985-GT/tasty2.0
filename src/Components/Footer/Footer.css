@@ -1,0 +1,121 @@
+.contenedorFooter {
+    background-color: #060613;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 15em;
+    width: 100%; 
+   }
+
+/* ARRIBA FOOTER */
+.arribaFooter {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15em; 
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+    }
+
+.arribaIzquierdaFooter {
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 20em;
+    border-radius: 2em 2em 2em 2em;
+    }
+
+.arribaDerechaFooter {
+    background: rgb(200,255,235);
+    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 3em;
+    width: 20em;
+    border-radius: 2em 2em 2em 2em;
+   }
+
+
+ /* ABAJO FOOTER */
+
+.abajoFooter {
+    background-color: #060613;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 15em; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+   
+    
+}
+
+.caja1{
+    /* background-color: grey; */
+    height: 10em;
+    width: 20em;
+    /* background-image: url(../../img/FUE.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.caja2{
+    /* background-color: grey; */
+    height: 10em;
+    width: 20em;
+    /* background-image: url(../../img/FGE.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caja3{
+    /* background-color: grey; */
+    height: 10em;
+    width: 20em; 
+    /* background-image: url(../../img/FGC.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ICONOS */
+
+.iconoFacebook {
+    background-color: black;
+    height: 2em;
+    width: 2em;
+    border-radius: 2em;
+    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-position: center;
+}
+
+.iconoInstagram {
+    background-color: black;
+    height: 2em;
+    width: 2em;
+    border-radius: 2em; 
+    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-position: center;
+}
+
+.iconoTwitter {
+    background-color: black;
+    height: 2em;
+    width: 2em;
+    border-radius: 2em;
+    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-position: center;
+}
