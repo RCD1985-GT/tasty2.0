@@ -24,7 +24,7 @@ return(
 	
 	  <div className="contenedorHeader">
 
-		<div className="logo" onClick={()=>navegar("/")}><b>Movie World</b></div>
+		<div className="logo" onClick={()=>navegar("/")}><b>Tasty</b></div>
 
        
 
@@ -33,7 +33,7 @@ return(
 			
 			<div className="acceso" onClick={()=>navegar("/acceso")} >Acceso</div>
 
-			<div className="admin" onClick={()=>navegar("/admin")} >Admin</div>
+			{/* <div className="admin" onClick={()=>navegar("/admin")} >Admin</div> */}
 			
 		</div>
 

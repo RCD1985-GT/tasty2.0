@@ -1,0 +1,57 @@
+.diseñoRegistro {
+    height: 100vh;
+    width: 100vw;
+    background-color: #060613;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.diseñoFormularioRegistro {
+    height: 30em;
+    width: 20em;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1em;
+    border: 1px solid black;
+}
+
+.arribaRegistro {
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.medioRegistro {
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.abajoRegistro {
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonRegistro {
+    height: 3em;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1em;
+    cursor: pointer;
+    
+}
