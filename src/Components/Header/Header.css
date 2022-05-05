@@ -33,31 +33,6 @@
     font-weight: 600;
 }
 
-
-.secciones {
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
-    display: flex;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 3em;
-    width: 25em;
-    border-radius: 1em;
-    cursor: pointer;
-    border: 2px solid whitesmoke;
-    margin-right: 35em;
-    
-   }
-
-.textoSecciones {
-    font-size: 17px;
-}
-
-.textoSecciones:hover {
-    font-size: 20px;
-}
-
 .entrar {
     background: rgb(200,255,235);
     background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);

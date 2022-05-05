@@ -26,12 +26,7 @@ return(
 
 		<div className="logo" onClick={()=>navegar("/")}><b>Movie World</b></div>
 
-        <div className="secciones">
-			<p className='textoSecciones' onClick={()=>navegar("/peliculas")}>Peliculas</p>
-			<p className='textoSecciones' onClick={()=>navegar("/top20")}>Top20</p>
-			<p className='textoSecciones' onClick={()=>navegar("/novedades")}>Novedades</p>
-
-		</div>
+       
 
 		<div className="entrar">
 			<div className="registro" onClick={()=>navegar("/registro")}>Registro</div> 
