@@ -1,6 +1,6 @@
 
-export const GENERO = 'genero';
-export const DETALLES_PELICULA = 'detalles_pelicula';
+export const TIPO = 'tipo';
+export const DETALLES_RECETA = 'detalles_receta';
 export const CREDENCIALES = 'credenciales';
 
 

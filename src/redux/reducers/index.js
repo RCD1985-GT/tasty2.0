@@ -2,16 +2,16 @@
 
 import {combineReducers} from 'redux';
 
-import genero from './datosGenero-reducer';
+import tipo from './datosTipo-reducer';
 
-import peliculaSeleccionada from './detallesPelicula-reducer';
+import recetaSeleccionada from './detallesReceta-reducer';
 
 import credenciales from './datosCredenciales-reducer';
 
 
 
 const rootReducer = combineReducers({
-    genero, peliculaSeleccionada, credenciales
+    tipo, recetaSeleccionada, credenciales
 });
 
 export default rootReducer;

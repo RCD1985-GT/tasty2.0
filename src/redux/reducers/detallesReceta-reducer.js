@@ -1,14 +1,14 @@
-import {DETALLES_PELICULA} from '../types';
+import {DETALLES_RECETA} from '../types';
 
 const estadoInicial = {
-    pelicula: {},
+    receta: {},
     
 };
 
-const seleccionPeliculaReducer = (state = estadoInicial, action) => {
+const seleccionRecetaReducer = (state = estadoInicial, action) => {
     switch(action.type){
-        //GUARDO EN EL ESTADO LOS DATOS DE LAS PELICULAS
-        case DETALLES_PELICULA :
+        //GUARDO EN EL ESTADO LOS DATOS DE LAS RECETAS
+        case DETALLES_RECETA :
             return action.payload; // muevo el contenido sin modificar
 
         // case MOVIES_TITLE :
@@ -19,4 +19,4 @@ const seleccionPeliculaReducer = (state = estadoInicial, action) => {
     }
 }
 
-export default seleccionPeliculaReducer;
+export default seleccionRecetaReducer;
