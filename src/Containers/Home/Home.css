@@ -23,7 +23,7 @@
     background-size: cover;
 }
 
-.infoGeneros {
+.infoTipos {
     height: 2em;
     width: 15em;
     display: flex;
@@ -33,7 +33,7 @@
     background: rgb(200,255,235);
     background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
 }
-.contenedorGeneros {
+.contenedorTipos {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -51,7 +51,7 @@
 
 /* BLOQUE 1 */
 
-.bloque1Generos{
+.bloque1Tipos{
     height: 25%;
     width: 100%;
     display: flex;
@@ -63,7 +63,7 @@
     color: antiquewhite;
 }
 
-.bloque1Generos1 {
+.bloque1Tipos1 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -74,7 +74,7 @@
 }
 
 
-.bloque1Generos2 {
+.bloque1Tipos2 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -84,7 +84,7 @@
     border-radius: 1em;
 } 
 
-.bloque1Generos3 { 
+.bloque1Tipos3 { 
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -94,7 +94,7 @@
     border-radius: 1em;
 } 
 
-.bloque1Generos4 {
+.bloque1Tipos4 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -107,7 +107,7 @@
 
 /* BLOQUE 2 */
 
-.bloque2Generos{
+.bloque2Tipos{
     height: 25%;
     width: 100%;
     display: flex;
@@ -122,7 +122,7 @@
     color: antiquewhite;
 }
 
-.bloque2Generos1 {
+.bloque2Tipos1 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -133,7 +133,7 @@
 }
 
 
-.bloque2Generos2 {
+.bloque2Tipos2 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -143,7 +143,7 @@
     border-radius: 1em;
 }
 
-.bloque2Generos3 {
+.bloque2Tipos3 {
     height: 100%;
     width: 25%;
     border: 2px solid whitesmoke;
@@ -153,7 +153,7 @@
     border-radius: 1em;
 }
 
-.bloque2Generos4 {
+.bloque2Tipos4 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -165,7 +165,7 @@
 
 /* BLOQUE 3 */
 
-.bloque3Generos{
+.bloque3Tipos{
     height: 25%;
     width: 100%;
     display: flex;
@@ -177,7 +177,7 @@
     color: antiquewhite;
 }
 
-.bloque3Generos1 {
+.bloque3Tipos1 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -188,7 +188,7 @@
 }
 
 
-.bloque3Generos2 {
+.bloque3Tipos2 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -198,7 +198,7 @@
     border-radius: 1em;
 }
 
-.bloque3Generos3 {
+.bloque3Tipos3 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -208,7 +208,7 @@
     border-radius: 1em;
 }
 
-.bloque3Generos4 {
+.bloque3Tipos4 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -220,7 +220,7 @@
 
 /* BLOQUE 4 */
 
-.bloque4Generos{
+.bloque4Tipos{
     height: 25%;
     width: 100%;
     display: flex;
@@ -232,7 +232,7 @@
     color: antiquewhite;
 }
 
-.bloque4Generos1 {
+.bloque4Tipos1 {
     height: 100%;
     width: 25%;
     border: 3px solid whitesmoke;
@@ -243,7 +243,7 @@
 }
 
 
-.bloque4Generos2 {
+.bloque4Tipos2 {
     height: 100%;
     width: 25%;
     border: 2px solid whitesmoke;
@@ -253,7 +253,7 @@
     border-radius: 1em;
 }
 
-.bloque4Generos3 {
+.bloque4Tipos3 {
     height: 100%;
     width: 25%;
     border: 2px solid whitesmoke;
@@ -266,7 +266,7 @@
     border-radius: 1em;
 }
 
-.bloque4Generos4 {
+.bloque4Tipos4 {
     height: 100%;
     width: 25%;
     border: 2px solid whitesmoke;

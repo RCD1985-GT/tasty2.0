@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { connect } from 'react-redux';
-import { GENERO } from '../../redux/types';
+import { TIPO } from '../../redux/types';
 import {useNavigate} from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ const Home = (props) => {
 	const navegar = (lugar,criterio) => {
 
 		//Guardamos en REDUX el criterio
-        props.dispatch({type: GENERO, payload: criterio});
+        props.dispatch({type: TIPO, payload: criterio});
 
         navigate(lugar);
     }
@@ -22,38 +22,34 @@ const Home = (props) => {
         <div className='diseñoHome'>
          
              <div className="contenedorInfo"> 
-                <div className='infoGeneros'>
+                <div className='infoTipos'>
                 <b>Bienvenido a Movie World</b>
                 </div>
             </div>
-            <div className="contenedorGeneros">
+            <div className="contenedorTipos">
 
-                <div className="bloque1Generos">
-                    <div className="bloque1Generos1" onClick={()=>navegar("/:genero","accion")}>ACCION</div>
-                    <div className="bloque1Generos2" onClick={()=>navegar("/:genero","animacion")}>ANIMACION</div>
-                    <div className="bloque1Generos3" onClick={()=>navegar("/:genero","belico")}>BELICO</div>
-                    <div className="bloque1Generos4" onClick={()=>navegar("/:genero","ciencia")}>CIENCIA</div>
+                <div className="bloque1Tipos">
+                    <div className="bloque1Tipos1" onClick={()=>navegar("/:genero","ensalada")}>ENSALADA</div>
+                    <div className="bloque1Tipos2" onClick={()=>navegar("/:genero","animacion")}>ASADO</div>
+                    <div className="bloque1Tipos3" onClick={()=>navegar("/:genero","belico")}>SALSA</div>
+                    <div className="bloque1Tipos4" onClick={()=>navegar("/:genero","ciencia")}>CRUJIENTE</div>
                 </div>
 
-                <div className="bloque2Generos">
-                    <div className="bloque2Generos1" onClick={()=>navegar("/:genero","clasicos")}>CLASICOS</div>
-                    <div className="bloque2Generos2" onClick={()=>navegar("/:genero","comedia")}>COMEDIA</div>
-                    <div className="bloque2Generos3" onClick={()=>navegar("/:genero","documental")}>DOCUMENTAL</div>
-                    <div className="bloque2Generos4" onClick={()=>navegar("/:genero","drama")}>DRAMA</div>
+                <div className="bloque2Tipos">
+                    <div className="bloque2Tipos1" onClick={()=>navegar("/:genero","clasicos")}>CRUDO</div>
+                    <div className="bloque2Tipos2" onClick={()=>navegar("/:genero","comedia")}>VEGANO</div>
+                    <div className="bloque2Tipos3" onClick={()=>navegar("/:genero","documental")}>PICANTE</div>
+                    <div className="bloque2Tipos4" onClick={()=>navegar("/:genero","drama")}>ESPECIADO</div>
                 </div>
 
-                <div className="bloque3Generos">
-                    <div className="bloque3Generos1" onClick={()=>navegar("/:genero","infantil")}>INFANTIL</div>
-                    <div className="bloque3Generos2" onClick={()=>navegar("/:genero","musical")}>MUSICAL</div>
-                    <div className="bloque3Generos3" onClick={()=>navegar("/:genero","romantica")}>ROMANTICA</div>
-                    <div className="bloque3Generos4" onClick={()=>navegar("/:genero","terror")}>TERROR</div>
+                <div className="bloque3Tipos">
+                    <div className="bloque3Tipos1" onClick={()=>navegar("/:genero","infantil")}>PESCADO</div>
+                    <div className="bloque3Tipos2" onClick={()=>navegar("/:genero","musical")}>CARNE</div>
+                    <div className="bloque3Tipos3" onClick={()=>navegar("/:genero","romantica")}>PLANCHA</div>
+                    <div className="bloque3Tipos4" onClick={()=>navegar("/:genero","terror")}>COCIDO</div>
                 </div>
 
-                <div className="bloque4Generos">
-                    <div className="bloque4Generos1" onClick={()=>navegar("/:genero","thriller")}>THRILLER</div>
-                    <div className="bloque4Generos2" onClick={()=>navegar("/:genero","western")}>WESTERN</div>
-                </div>
-
+               
             </div>    
 
         </div>
