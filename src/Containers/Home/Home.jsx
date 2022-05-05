@@ -23,7 +23,7 @@ const Home = (props) => {
          
              <div className="contenedorInfo"> 
                 <div className='infoTipos'>
-                <b>Bienvenido a Movie World</b>
+                <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
                 </div>
             </div>
             <div className="contenedorTipos">
