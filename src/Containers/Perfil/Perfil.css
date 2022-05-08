@@ -1,0 +1,43 @@
+.perfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 37em;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 37em;
+}
+
+.recetas_fav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 37em;
+
+}
+
+.borrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+    height: 2em;
+    width: 2em;
+
+
+}

@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Register from './Containers/Register/Register';
 import Login from './Containers/Login/Login';
 import Tipo from './Containers/Tipo/Tipo';
+import Perfil from './Containers/Perfil/Perfil';
 
 
 
@@ -21,7 +22,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/:tipo" element={<Tipo/>}/>
-      
+        <Route path="/perfil" element={<Perfil/>} />
         </Routes>
 
         <Footer/>
