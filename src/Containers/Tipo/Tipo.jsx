@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import './Tipo.css';
-import { DETALLES_RECETA } from '../../redux/types';
+import { DETALLES, detalles} from '../../redux/types';
 
 
 const Tipo = (props) => { 
@@ -30,7 +30,7 @@ const Tipo = (props) => {
             
     console.log(receta);
     //Guardamos la receta escogida en REDUX 
-    props.dispatch({type:DETALLES_RECETA, payload: receta});
+    props.dispatch({type:DETALLES, payload: receta});
     console.log("receta guardada en Redux")
 
 
