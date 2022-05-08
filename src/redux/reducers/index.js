@@ -6,7 +6,7 @@ import tipo from './datosTipo-reducer';
 
 import recetaSeleccionada from './detallesReceta-reducer';
 
-import credenciales from './datosCredenciales-reducer';
+import credenciales from './datosLogin-reducer';
 
 
 
