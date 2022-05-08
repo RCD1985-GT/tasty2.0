@@ -1,83 +1,54 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Header.css';
 import { LOGOUT } from '../../redux/types';
 import { connect } from 'react-redux';
-import axios from 'axios';
-
-
 
 const Header = (props) => {
 
+	// Variables locales
 	let navigate = useNavigate();
 
+	// Funcion navegar
 	const navegar = (lugar) => {
-		console.log("me meto aqui"); // mirar esto
-        setTimeout(() => {
-            navigate(lugar);
-        }, 200);
-    }
+		navigate(lugar);
+	}
 
-	const [nombre, setNombre] = useState("");
-
+	// Funcion Logout
 	const logOut = () => {
-        //Borrar de RDX las credenciales
-        props.dispatch({ type: LOGOUT });
-
-        setTimeout(() => {
-            navigate("/");
-        }, 1500);
-    }
-
-
-if (!props.credenciales?.token) {
-return(
+		props.dispatch({ type: LOGOUT });
+		setTimeout(() => {
+			navigate("/");
+		}, 1500);
+	}
 	
-	  <div className="contenedorHeader">
+	// SI HAY TOKEN
+	if (!props.credenciales?.token) {
+		return (
+			<div className="contenedorHeader">
+				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className="entrar">
+					<div className="registro" onClick={() => navegar("/register")}>Registro</div>
+					<div className="acceso" onClick={() => navegar("/login")} >Acceso</div>
+				</div>
+			</div>
+		)
 
-		<div className="logo" onClick={()=>navegar("/")}><b>Tasty</b></div>
-
-       
-		<div className="entrar">
-			<div className="registro" onClick={()=>navegar("/register")}>Registro</div> 
-			
-			<div className="acceso" onClick={()=>navegar("/login")} >Acceso</div>
-
-						
-		</div>
-
-		  
-	  </div>
-	)
-} else {
-	return ( 
-
-		<div className="contenedorHeader">
-			<div className="logo" onClick={()=>navegar("/")}><b>Tasty</b></div>
-
-			
-		<div className="entrar">
-
-		<div className="link" onClick={()=>navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
-
-		<div className="" onClick={() => logOut()}>Logout</div>
-
-			{/* <div className="registro" onClick={()=>navegar("/register")}>Registro</div> 
-			
-			<div className="acceso" onClick={()=>navegar("/login")} >Acceso</div> */}
-		
-		</div>
-
-
-
-		</div>
-	)
-}
+		// SI NO HAY TOKEN
+	} else {
+		return (
+			<div className="contenedorHeader">
+				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className="entrar">
+					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
+					<div className="" onClick={() => logOut()}>Logout</div>
+				</div>
+			</div>
+		)
+	}
 };
 
-// export default Header;
-
 export default connect((state) => ({
-    credenciales: state.credenciales,
-  }))(Header);
+	credenciales: state.credenciales,
+}))(Header);
