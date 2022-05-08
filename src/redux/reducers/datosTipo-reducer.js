@@ -4,7 +4,7 @@ const initialState = {
     tipo: ""
 };
 
-const busquedaTipoReducer = (state = initialState, action) => {
+const datosTipoReducer = (state = initialState, action) => {
     switch(action.type){
         //GUARDO EN EL ESTADO LOS DATOS DEL TIPO
         case TIPO :
@@ -15,4 +15,4 @@ const busquedaTipoReducer = (state = initialState, action) => {
     }
 }
 
-export default busquedaTipoReducer;
+export default datosTipoReducer;

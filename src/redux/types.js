@@ -10,6 +10,5 @@ export const TIPO = 'tipo';
 export const DETALLES = 'detalles';
 
 
-// export const CREDENCIALES = 'credenciales';
 
 

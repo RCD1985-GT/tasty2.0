@@ -5,7 +5,7 @@ const estadoInicial = {
     
 };
 
-const seleccionRecetaReducer = (state = estadoInicial, action) => {
+const datosRecetaReducer = (state = estadoInicial, action) => {
     switch(action.type){
         //GUARDO EN EL ESTADO LOS DATOS DE LAS RECETAS
         case DETALLES :
@@ -17,4 +17,4 @@ const seleccionRecetaReducer = (state = estadoInicial, action) => {
     }
 }
 
-export default seleccionRecetaReducer;
+export default datosRecetaReducer;
