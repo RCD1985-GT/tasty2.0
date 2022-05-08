@@ -108,7 +108,7 @@ const Login = (props) => {
 
     if(credenciales?.token !== undefined){
         return(
-            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a Movie World.</div>
+            <div>Hola {credenciales?.usuario?.nombre}, bienvenid@ a TASTY.</div>
         )
     } else {
          
