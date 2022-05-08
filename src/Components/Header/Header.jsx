@@ -29,9 +29,9 @@ return(
        
 
 		<div className="entrar">
-			<div className="registro" onClick={()=>navegar("/registro")}>Registro</div> 
+			<div className="registro" onClick={()=>navegar("/register")}>Registro</div> 
 			
-			<div className="acceso" onClick={()=>navegar("/acceso")} >Acceso</div>
+			<div className="acceso" onClick={()=>navegar("/login")} >Acceso</div>
 
 			{/* <div className="admin" onClick={()=>navegar("/admin")} >Admin</div> */}
 			
