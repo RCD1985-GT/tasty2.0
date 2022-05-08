@@ -4,14 +4,14 @@ import {combineReducers} from 'redux';
 
 import tipo from './datosTipo-reducer';
 
-import recetaSeleccionada from './detallesReceta-reducer';
+import detalles from './datosReceta-reducer';
 
 import credenciales from './datosLogin-reducer';
 
 
 
 const rootReducer = combineReducers({
-    tipo, recetaSeleccionada, credenciales
+    tipo, detalles, credenciales
 });
 
 export default rootReducer;

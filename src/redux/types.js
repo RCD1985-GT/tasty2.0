@@ -7,7 +7,7 @@ export const MODIFY_CREDENTIALS = 'modify_credentials';
 export const TIPO = 'tipo';
 
 // Guardar detalles de receta
-export const DETALLES_RECETA = 'detalles_receta';
+export const DETALLES = 'detalles';
 
 
 // export const CREDENCIALES = 'credenciales';
