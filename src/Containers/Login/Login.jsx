@@ -1,9 +1,22 @@
-import React, {useState, useEffect} from 'react';
+// import React, {useState, useEffect} from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import { CREDENCIALES } from '../../redux/types';
+// import { connect } from 'react-redux';
+// import './Acceso.css';
+
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { CREDENCIALES } from '../../redux/types';
+
+//REDUX...
 import { connect } from 'react-redux';
-import './Acceso.css';
+import { LOGIN } from '../../redux/types';
+
+
+import './Login.css';
+
+
 
 
 const Login = (props) => {
@@ -82,7 +95,7 @@ const Login = (props) => {
                 setMsgError2("Usuario o contraseña inválido")
             }else{
                 
-                props.dispatch({type:CREDENCIALES, payload: resultado.data});
+                props.dispatch({type:LOGIN, payload: resultado.data});
                 setCredenciales(resultado.data);
                 
             }
@@ -137,10 +150,11 @@ const Login = (props) => {
 
 };
 
+export default connect()(Login);
 
 // export default Login;
 
-export default connect((state) => ({
-    peliculaSeleccionada: state.peliculaSeleccionada,
-	credenciales: state.credenciales
-}))(Login);
+// export default connect((state) => ({
+//     peliculaSeleccionada: state.peliculaSeleccionada,
+// 	credenciales: state.credenciales
+// }))(Login);
