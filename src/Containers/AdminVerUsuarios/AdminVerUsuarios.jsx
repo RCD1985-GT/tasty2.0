@@ -15,16 +15,12 @@ const AdminVerUsuarios = (props) => {
 
     // UseEffect 1
     useEffect(() => {
-        // if (props.credenciales.usuario.rol === true) {
-            traeUsuarios();
-        //   }
+        traeUsuarios();
     }, []);
 
     // UseEffect 2
     // useEffect(() => {
-    //    
     //   })
-
 
     // Funcion traer usuarios
     const traeUsuarios = async () => {
@@ -39,7 +35,7 @@ const AdminVerUsuarios = (props) => {
             let resultado = await axios.get("http://localhost:3300/usuarios", config);
             console.log("llamada a axios realizada")
             console.log(resultado);
-            setUsuarios(resultado.data); 
+            setUsuarios(resultado.data);
 
         } catch (error) {
             console.log(error);
@@ -54,7 +50,7 @@ const AdminVerUsuarios = (props) => {
 
                 {usuarios.map(usuario => {
 
-                    return ( 
+                    return (
                         <div className="itemUsuario" key={usuario.id} >
                             <p className="usuario">{usuario.nombre}</p>
                             <p className="usuario">{usuario.apellido}</p>
@@ -63,10 +59,8 @@ const AdminVerUsuarios = (props) => {
                     )
                 })
                 }
-
             </div>
         )
-
     } else {
         return (
             <div className="diseñoUsuarios">

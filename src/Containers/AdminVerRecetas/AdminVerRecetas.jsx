@@ -15,9 +15,7 @@ const AdminVerRecetas = (props) => {
 
     // UseEffect de montaje
     useEffect(() => {
-        if (props.credenciales.token === "") {
         traeRecetas();
-        }
     }, []);
 
     // UseEffect de actualizacion
@@ -27,6 +25,10 @@ const AdminVerRecetas = (props) => {
     // Funcion traer recetas
     const traeRecetas = async () => {
         console.log("entro en funcion trae recetas")
+
+        let config = {
+            headers: { Authorization: `Bearer ${props.credenciales.token}` }
+        };
 
         try {
             console.log("llamo a axios")
@@ -40,9 +42,8 @@ const AdminVerRecetas = (props) => {
         }
     }
 
-    if (props.credenciales.token === "") {
-        // if (props.credenciales.usuario.rol === true) {
-        console.log("entro en mapeo")
+    if (props.credenciales?.usuario.rol === true) {
+             console.log("entro en mapeo")
 
         return (
             <div className="contenidoRecetas">
@@ -60,10 +61,8 @@ const AdminVerRecetas = (props) => {
                     )
                 })
                 }
-
             </div>
         )
-
     } else {
         return (
             <div className="diseñoRecetas">
