@@ -40,10 +40,9 @@ const AdminVerRecetas = (props) => {
         }
     }
 
-    // if (props.credenciales.token === "") {
-        if (props.credenciales.usuario.rol === true) {
+    if (props.credenciales.token === "") {
+        // if (props.credenciales.usuario.rol === true) {
         console.log("entro en mapeo")
-
 
         return (
             <div className="contenidoRecetas">
@@ -78,6 +77,7 @@ const AdminVerRecetas = (props) => {
 
 
 export default connect((state) => ({
+    tipo: state.tipo,
     credenciales: state.credenciales
 }))(AdminVerRecetas);
 

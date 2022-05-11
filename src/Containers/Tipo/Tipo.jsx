@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import './Tipo.css';
-import { DETALLES, detalles } from '../../redux/types';
+import { DETALLES } from '../../redux/types'; 
+
 
 
 const Tipo = (props) => {

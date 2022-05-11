@@ -15,9 +15,9 @@ const AdminVerUsuarios = (props) => {
 
     // UseEffect 1
     useEffect(() => {
-        if (props.credenciales.usuario.rol === true) {
+        // if (props.credenciales.usuario.rol === true) {
             traeUsuarios();
-          }
+        //   }
     }, []);
 
     // UseEffect 2
@@ -30,9 +30,13 @@ const AdminVerUsuarios = (props) => {
     const traeUsuarios = async () => {
         console.log("entro en funcion trae usuarios")
 
+        let config = {
+            headers: { Authorization: `Bearer ${props.credenciales.token}` }
+        };
+
         try {
             console.log("llamo a axios")
-            let resultado = await axios.get("http://localhost:3300/usuarios");
+            let resultado = await axios.get("http://localhost:3300/usuarios", config);
             console.log("llamada a axios realizada")
             console.log(resultado);
             setUsuarios(resultado.data); 
@@ -42,7 +46,7 @@ const AdminVerUsuarios = (props) => {
         }
     }
 
-    if (props.credenciales.token === "") {
+    if (props.credenciales?.usuario.rol === true) {
         console.log("entro en mapeo")
 
         return (
