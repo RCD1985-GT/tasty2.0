@@ -14,9 +14,9 @@ const AdminVerUsuarios = (props) => {
     const [usuarios, setUsuarios] = useState([]);
 
     // UseEffect de montaje
-    // useEffect(() => {
-    //     traeUsuarios();
-    // }, []);
+    useEffect(() => {
+        traeUsuarios();
+    }, []);
 
     // Use effect de actualizacion
     // useEffect(() => {

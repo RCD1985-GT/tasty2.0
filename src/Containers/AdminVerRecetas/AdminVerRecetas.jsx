@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './AdminVerRecetas.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const AdminVerRecetas = (props) => {
     console.log("entro en AdminVerRecetas")
+
+    // Variables locales
+    let navigate = useNavigate();
 
     // Hook
     const [recetas, setRecetas] = useState([]);
@@ -28,22 +32,23 @@ const AdminVerRecetas = (props) => {
             let resultado = await axios.get("http://localhost:3300/recetas");
             console.log("llamada a axios realizada")
             console.log(resultado);
-            setRecetas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+            setRecetas(resultado.data); 
 
         } catch (error) {
             console.log(error);
         }
     }
 
-    if (recetas[0]?.id != undefined) {
+    if (props.credenciales.token === "") {
         console.log("entro en mapeo")
+
 
         return (
             <div className="contenidoRecetas">
 
                 {recetas.map(receta => {
 
-                    return ( // COMPROBAR SI USUARIOS.ID VA EN SINGULAR O PLURAL
+                    return ( 
                         <div className="itemReceta" key={receta.id} >
                             <p className="receta">{receta.titulo}</p>
                             <p className="receta">{receta.tipo}</p>
