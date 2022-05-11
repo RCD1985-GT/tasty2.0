@@ -62,16 +62,12 @@ const Tipo = (props) => {
                         <p className="titulo">Titulo:{item.titulo}</p>
                         <p className="titulo">Tipo:{item.tipo}</p>
                         <p className="titulo">Foto{item.poster}</p>
-                        <p className="titulo">Ingredientes:{item.ingredientes}</p>
-                        <p className="titulo">Preparacion:{item.preparacion}</p>
+                        {/* <p className="titulo">Ingredientes:{item.ingredientes}</p>
+                        <p className="titulo">Preparacion:{item.preparacion}</p> */}
                     </div>
                 )
-
-
             })
             }
-
-
         </div>
     )
 

@@ -24,7 +24,8 @@ const Header = (props) => {
 	}
 	
 	// SI HAY TOKEN
-	if (!props.credenciales?.token) {
+	if (props.credenciales.token === '') {
+		
 		return (
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
@@ -35,17 +36,29 @@ const Header = (props) => {
 			</div>
 		)
 
-		// SI NO HAY TOKEN
+		// SI ES ADMINISTRADOR
+	} else if (props.credenciales.usuario.rol === true){
+		return (
+			<div className="contenedorHeader">
+				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className="entrar">
+					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
+					<div className="link" onClick={() => logOut()}>Logout</div>
+					<div className="link" onClick={() => navegar('/admin')}>Zona Admin</div>
+				</div>
+			</div>
+		) 
+		// SI ESTA LOGUEADO
 	} else {
 		return (
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
 				<div className="entrar">
 					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
-					<div className="" onClick={() => logOut()}>Logout</div>
+					<div className="link" onClick={() => logOut()}>Logout</div>
 				</div>
 			</div>
-		)
+		) 
 	}
 };
 

@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 // import { MODIFY_credenciales } from '../../redux/types';
 import axios from 'axios';
 
-
-
 import "./Perfil.css";
 
 const Perfil = (props) => {
@@ -61,7 +59,7 @@ const Perfil = (props) => {
 
         let id = props.credenciales.usuario.id;
 
-        let res = await axios.get(`http://localhost:5000/receta_adquirida/${id}`, config); // CAMBIAR
+        let res = await axios.get(`http://localhost:3300/guardados/nuevo${id}`, config); // CAMBIAR
 
         setRecetasGuardadas(res.data);
     }
@@ -142,5 +140,6 @@ const Perfil = (props) => {
 }
 
 export default connect((state) => ({
-    credenciales: state.credenciales
+    credenciales: state.credenciales,
+    detalles: state.detalles
 }))(Perfil);
