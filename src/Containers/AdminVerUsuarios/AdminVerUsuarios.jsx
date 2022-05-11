@@ -42,7 +42,7 @@ const AdminVerUsuarios = (props) => {
         }
     }
 
-    if (props.credenciales.usuario.token === "") {
+    if (props.credenciales.token === "") {
         console.log("entro en mapeo")
 
         return (

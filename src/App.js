@@ -11,7 +11,7 @@ import Perfil from './Containers/Perfil/Perfil';
 import Admin from './Containers/Admin/Admin';
 import AdminVerUsuarios from './Containers/AdminVerUsuarios/AdminVerUsuarios';
 import AdminCrearReceta from './Containers/AdminCrearReceta/AdminCrearReceta';
-import DetallesReceta from './Containers/DetallesReceta/DetallesReceta';
+// import DetallesReceta from './Containers/DetallesReceta/DetallesReceta';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route path="/admin" element={<Admin/>} />
         <Route path="/adminVerUsuarios" element={<AdminVerUsuarios/>} />
         <Route path="/adminCrearReceta" element={<AdminCrearReceta/>} />
-        <Route path="/detallesReceta" element={<DetallesReceta/>} />
+        {/* <Route path="/detallesReceta" element={<DetallesReceta/>} /> */}
         </Routes>
 
         <Footer/>
