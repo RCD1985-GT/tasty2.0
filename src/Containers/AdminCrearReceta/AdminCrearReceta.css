@@ -1,45 +1,58 @@
-.contenidoRecetas {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    column-gap: 1em;
-    flex-wrap: wrap;
+
+.diseñoCrearReceta {
+    height: 100vh;
+    width: 100vw;
     background-color: #060613;
-    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.itemReceta {
-    height: 10em;
+.diseñoFormularioCrear {
+    height: 30em;
     width: 20em;
     background-color: lightgrey;
-    margin-top: 1em;
-    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 1em;
-    border: 3px solid white;
+    border: 1px solid black;
 }
 
-.diseñoRecetas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #060613;
-}
-
-.contenedorRecetas {
-    height: 100vh;
-    width: 100vw;
-    background-color: red;
+.arribaRegistro {
+    height: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    column-gap: 1em;
+}
+
+.medioRegistro {
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.abajoRegistro {
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonRegistro {
+    height: 3em;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 1em;
+    cursor: pointer;
+    
 }

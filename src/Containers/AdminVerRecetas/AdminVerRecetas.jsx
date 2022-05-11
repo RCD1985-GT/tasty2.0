@@ -32,7 +32,7 @@ const AdminVerRecetas = (props) => {
 
         try {
             console.log("llamo a axios")
-            let resultado = await axios.get("http://localhost:3300/recetas");
+            let resultado = await axios.get("http://localhost:3300/recetas", config);
             console.log("llamada a axios realizada")
             console.log(resultado);
             setRecetasAdmin(resultado.data); 
