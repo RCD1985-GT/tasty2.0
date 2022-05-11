@@ -17,10 +17,9 @@ import { LOGIN } from '../../redux/types';
 import './Login.css';
 
 
-
-
 const Login = (props) => {
 
+     // Navegar
     let navigate = useNavigate();
 
     

@@ -87,7 +87,7 @@ const Registro = () => {
             console.log(resultado);
             
                 setTimeout(()=>{
-                    navigate("/acceso");
+                    navigate("/login");
                 },1000);
             
             
