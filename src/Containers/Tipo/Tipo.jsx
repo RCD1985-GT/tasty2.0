@@ -13,7 +13,7 @@ const Tipo = (props) => {
     let navigate = useNavigate();
 
     const navegar = () => {
-        navigate("/detalles");
+        navigate("/detallesReceta");
     }
 
     // Hook de recetas
@@ -31,9 +31,7 @@ const Tipo = (props) => {
         //Guardamos la receta escogida en REDUX 
         props.dispatch({ type: DETALLES, payload: receta });
         console.log("receta guardada en Redux")
-
-
-    //Redirigimos a la vista de detalles Receta con navigate
+    // y redirigimos a la vista de detalles Receta con navigate
         navigate("/detallesReceta");
     }
 
@@ -45,15 +43,12 @@ const Tipo = (props) => {
             let resultado = await axios.get(`http://localhost:3300/recetas/${props.tipo}`);
             console.log(resultado)
             setRecetas(resultado.data);
-            console.log("receta guardada en Hook")
-
+            console.log("recetas recibidas y guardadas en Hook")
 
         } catch (error) {
             console.log(error);
         }
     };
-
-
     return (
         <div className="contenidoTipo">
             {recetas.map(item => {

@@ -13,16 +13,16 @@ const AdminVerUsuarios = (props) => {
     // Hook
     const [usuarios, setUsuarios] = useState([]);
 
-    // UseEffect de montaje
+    // UseEffect 1
     useEffect(() => {
-        traeUsuarios();
+        if (props.credenciales.usuario.rol === true) {
+            traeUsuarios();
+          }
     }, []);
 
-    // Use effect de actualizacion
+    // UseEffect 2
     // useEffect(() => {
-    //     if (props.credenciales.usuario.rol === false) {
-    //       navigate('/');
-    //     }
+    //    
     //   })
 
 

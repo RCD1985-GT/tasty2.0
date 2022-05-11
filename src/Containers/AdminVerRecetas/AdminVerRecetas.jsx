@@ -11,19 +11,20 @@ const AdminVerRecetas = (props) => {
     let navigate = useNavigate();
 
     // Hook
-    const [recetas, setRecetas] = useState([]);
+    const [recetasAdmin, setRecetasAdmin] = useState([]);
 
     // UseEffect de montaje
     useEffect(() => {
+        if (props.credenciales.token === "") {
         traeRecetas();
+        }
     }, []);
 
     // UseEffect de actualizacion
     // useEffect(() => {
-
     // });
 
-    // Funcion traer usuarios
+    // Funcion traer recetas
     const traeRecetas = async () => {
         console.log("entro en funcion trae recetas")
 
@@ -32,21 +33,22 @@ const AdminVerRecetas = (props) => {
             let resultado = await axios.get("http://localhost:3300/recetas");
             console.log("llamada a axios realizada")
             console.log(resultado);
-            setRecetas(resultado.data); 
+            setRecetasAdmin(resultado.data); 
 
         } catch (error) {
             console.log(error);
         }
     }
 
-    if (props.credenciales.token === "") {
+    // if (props.credenciales.token === "") {
+        if (props.credenciales.usuario.rol === true) {
         console.log("entro en mapeo")
 
 
         return (
             <div className="contenidoRecetas">
 
-                {recetas.map(receta => {
+                {recetasAdmin.map(receta => {
 
                     return ( 
                         <div className="itemReceta" key={receta.id} >
