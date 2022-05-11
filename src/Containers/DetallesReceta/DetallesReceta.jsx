@@ -1,0 +1,91 @@
+import React from 'react';
+import './DetallesReceta.css';
+import axios from 'axios'; 
+import { connect } from 'react-redux';
+import { useState, useEffect } from "react";
+
+const DetallesReceta = (props) => {
+	
+// YA TENGO LOS DATOS EN REDUX ASI QUE PASO DIRECTAMENTE AL RETURN 
+
+// Hook
+const [recetasGuardadas, setRecetasGuardadas] = useState(false);
+
+// UseEffect de montaje
+// useEffect(() => {
+	
+// }, []);
+
+// UseEffect de actualizacion
+// useEffect(() => {
+// });
+
+
+const guardarReceta = async () => {
+
+	
+    let body = {
+		recetaId : props.detalles?.id,
+		usuarioId : props.credenciales?.usuario.id, 
+		
+	   }
+
+    // let config = {
+	// headers: { Authorization: `Bearer ${props.credenciales.token}` }
+	// };
+
+	try {
+		console.log(body);
+		let resultado = await axios.post("http://localhost:3300/guardados/nuevo", body); 
+		console.log(resultado);
+		setRecetasGuardadas(true);
+		
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+if(recetasGuardadas === true){
+
+
+	return(
+
+	<div className="diseñoDetallesRecetas">
+	
+		<div className="contenedorDetallesRecetas">
+
+		Gracias por guardar {props.detalles?.titulo}
+			
+		</div>
+	</div>
+	
+);
+	
+	} else {   
+
+		return (
+		<div className="diseñoDetallesRecetas">
+			<div className="contenidoDetallesRecetas">
+				<div className="infoIzquierda"> 
+					{/* <img className="cartel" src={props.peliculaSeleccionada.poster} alt={props.peliculaSeleccionada.titulo}/> */}
+                    AQUI VA FOTO
+				</div> 
+			
+				<div className="infoDerecha"> 
+					<div className="detallesTitulo">{props.detalles?.titulo}</div>
+					<div className="detallesTipo">{props.detalles?.tipo}</div>
+					<button className='botonGuardar'>Guardar</button>
+					{/* onClick={()=>hacerPedido()} */}
+				</div>	
+			</div>
+		</div>
+		)
+	}
+	
+};
+
+export default connect((state) => ({
+    detalles: state.detalles,
+	credenciales: state.credenciales
+}))(DetallesReceta);
+
