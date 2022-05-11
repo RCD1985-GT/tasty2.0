@@ -9,6 +9,7 @@ import Login from './Containers/Login/Login';
 import Tipo from './Containers/Tipo/Tipo';
 import Perfil from './Containers/Perfil/Perfil';
 import Admin from './Containers/Admin/Admin';
+import AdminVerUsuarios from './Containers/AdminVerUsuarios/AdminVerUsuarios';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/:tipo" element={<Tipo/>}/>
         <Route path="/perfil" element={<Perfil/>} />
         <Route path="/admin" element={<Admin/>} />
+        <Route path="/adminVerUsuarios" element={<AdminVerUsuarios/>} />
         </Routes>
 
         <Footer/>
