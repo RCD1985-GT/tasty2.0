@@ -71,7 +71,6 @@ const AdminVerRecetas = (props) => {
 
 
 export default connect((state) => ({
-    // peliculaSeleccionada: state.peliculaSeleccionada,
     credenciales: state.credenciales
 }))(AdminVerRecetas);
 

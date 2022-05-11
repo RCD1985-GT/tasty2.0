@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from "react";
 import './AdminVerUsuarios.css';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
 const AdminVerUsuarios = (props) => {
     console.log("entro en AdminVerUsuarios")
 
+    // Variables locales
+    let navigate = useNavigate();
+
     // Hook
     const [usuarios, setUsuarios] = useState([]);
 
     // UseEffect de montaje
-    useEffect(() => {
-        traeUsuarios();
-    }, []);
-
-    // UseEffect de actualizacion
     // useEffect(() => {
+    //     traeUsuarios();
+    // }, []);
 
-    // });
+    // Use effect de actualizacion
+    // useEffect(() => {
+    //     if (props.credenciales.usuario.rol === false) {
+    //       navigate('/');
+    //     }
+    //   })
+
 
     // Funcion traer usuarios
     const traeUsuarios = async () => {
@@ -28,14 +35,14 @@ const AdminVerUsuarios = (props) => {
             let resultado = await axios.get("http://localhost:3300/usuarios");
             console.log("llamada a axios realizada")
             console.log(resultado);
-            setUsuarios(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+            setUsuarios(resultado.data); 
 
         } catch (error) {
             console.log(error);
         }
     }
 
-    if (usuarios[0]?.id != undefined) {
+    if (props.credenciales.usuario.token === "") {
         console.log("entro en mapeo")
 
         return (
@@ -43,7 +50,7 @@ const AdminVerUsuarios = (props) => {
 
                 {usuarios.map(usuario => {
 
-                    return ( // COMPROBAR SI USUARIOS.ID VA EN SINGULAR O PLURAL
+                    return ( 
                         <div className="itemUsuario" key={usuario.id} >
                             <p className="usuario">{usuario.nombre}</p>
                             <p className="usuario">{usuario.apellido}</p>
@@ -69,7 +76,6 @@ const AdminVerUsuarios = (props) => {
 
 
 export default connect((state) => ({
-    // peliculaSeleccionada: state.peliculaSeleccionada,
     credenciales: state.credenciales
 }))(AdminVerUsuarios);
 
