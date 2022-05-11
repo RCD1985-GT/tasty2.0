@@ -7,6 +7,7 @@ import {useNavigate} from 'react-router-dom';
 
 const Home = (props) => {
 
+    // Variables locales
     let navigate = useNavigate();
 
 	const navegar = (lugar,criterio) => {
