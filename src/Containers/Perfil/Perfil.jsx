@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import { MODIFY_credenciales } from '../../redux/types';
+import { MODIFY_credenciales } from '../../redux/types';
 import axios from 'axios';
 
 import "./Perfil.css";
@@ -12,9 +12,9 @@ const Perfil = (props) => {
     let navigate = useNavigate();
 
     // Hook recetas guardadas
-    const [recetasGuardadas, setRecetasGuardadas] = useState([]);
+    const [recetasGuardadas, setRecetasGuardadas] = useState([]); // MIRAR ESTO
 
-     // Hook datos uduario
+    // Hook datos uduario
     const [datosUsuario, setDatosUsuario] = useState({
         newPassword: '', // cambiar a español
     });
@@ -30,10 +30,10 @@ const Perfil = (props) => {
     // Use effect 1
     useEffect(() => {
         if (props.credenciales.token === '') {
-            navigate("/");
+            mostrarRecetasGuardadas();
         }
 
-        mostrarRecetasGuardadas();
+
     }, [])
 
     // Use effect 2
@@ -43,13 +43,13 @@ const Perfil = (props) => {
     // Función borrar receta
     // const borrar_pedido = (req, res) => {
 
-        // let id = props.credenciales.usuario.id;
+    // let id = props.credenciales.usuario.id;
 
 
-        // console.log(id);
-        // axios.delete(`http://localhost:5000/receta_adquirida/${id}`)
-        // console.log(res.data);
-    
+    // console.log(id);
+    // axios.delete(`http://localhost:5000/receta_adquirida/${id}`)
+    // console.log(res.data);
+
     // Funcion mostrar recetas guardadas
     const mostrarRecetasGuardadas = async () => {
 
@@ -59,8 +59,7 @@ const Perfil = (props) => {
 
         let id = props.credenciales.usuario.id;
 
-        let res = await axios.get(`http://localhost:3300/guardados/nuevo${id}`, config); // CAMBIAR
-
+        let res = await axios.get(`http://localhost:3300/guardados/${id}`, config); // NO VA
         setRecetasGuardadas(res.data);
     }
 
@@ -97,36 +96,33 @@ const Perfil = (props) => {
 
     return (
         <div className="perfil">
+
             <div className="datos">
                 <div className=''>
                     <div className=" "><b>Nombre: </b>{props.credenciales.usuario.nombre}</div>
                     <div className=" "><b>Apellidos: </b>{props.credenciales.usuario.apellido}</div>
                     <div className=" "><b>Email: </b>{props.credenciales.usuario.email}</div>
-                    <div className=" "><b>Age: </b>{props.credenciales.usuario.edad}</div>
-                    <div className=" "><b>Contraseña nueva:</b><input className='inp' type="text" name="newPassword" id="newPassword" title="newPassword" placeholder="new pass" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+                    <div className=" "><b>Contraseña nueva:</b><input className='' type="text" name="contraseña" id="contraseña" title="contraseña" placeholder="Nueva Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
                     {/* <div className="" onClick={() => updateUser()}>Update</div> */}
                 </div>
             </div>
-            <div className="recetas_fav">
+
+            <div className="favoritas">
                 <div>
-                    <p>Lista de tus recetas favorita {props.credenciales.usuario.nombre}</p>
+                    <p>{props.credenciales.usuario.nombre},estas son tus recetas favoritas:</p>
                     {
-                        recetasGuardadas.map(results => {
+                        recetasGuardadas.map(receta => {
                             return (
-                                <div className="pedidos2">
+                                <div className="contenidoFavoritas">
                                     <p>
-                                        Nombre: {results.nombre}.<br />
-                                        Ingredientes:{results.ingredientes}<br />
-                                        Preparacion:{results.preparacion}
+                                        Nombre: {receta.titulo}.<br />
+                                        {/* Ingredientes:{receta.ingredientes}<br />
+                                        Preparacion:{receta.preparacion} */}
                                     </p>
-                                    <img className='cartel3' src={results.imagen} alt=''></img>
                                 </div>
                             )
                         })
                     }
-                    {/* <div className='borrar' onClick={() => borrar_pedido()}> // CAMBIAR
-                    </div> */}
-
                 </div>
             </div>
 
@@ -135,11 +131,8 @@ const Perfil = (props) => {
             </div>
         </div>
     )
-
-
 }
 
 export default connect((state) => ({
     credenciales: state.credenciales,
-    detalles: state.detalles
 }))(Perfil);

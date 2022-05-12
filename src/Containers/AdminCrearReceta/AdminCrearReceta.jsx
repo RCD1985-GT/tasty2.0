@@ -35,7 +35,7 @@ const AdminCrearReceta = (props) => {
 
     // Funcion traer recetas
     const crearReceta = async () => {
-        console.log("entro en funcion que crea receta")
+        console.log("entro en funcion que guarda receta en BBDD") // NO ENTRA AQUI
 
         let config = {
             headers: { Authorization: `Bearer ${props.credenciales.token}` }
@@ -49,9 +49,11 @@ const AdminCrearReceta = (props) => {
             preparacion: datosUsuario.preparacion,
         }
 
+        
+
         try {
 
-             await axios.post("http://localhost:3300/recetas/registrar", body, config);
+             await axios.post(`http://localhost:3300/recetas/${props.credenciales.usuario.id}`, body, config);
              console.log(body)
 
         } catch (error) {

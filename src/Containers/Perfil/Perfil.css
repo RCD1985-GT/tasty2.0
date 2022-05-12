@@ -17,7 +17,7 @@
     height: 37em;
 }
 
-.recetas_fav {
+.contenidoFavoritas {
     display: flex;
     flex-direction: column;
     justify-content: center;
