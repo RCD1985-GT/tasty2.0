@@ -7,17 +7,33 @@ const AdminCrearReceta = (props) => {
     console.log("entro en AdminVerRecetas")
 
     // Hook
-    const [recetas, setRecetas] = useState([]);
+    const [datosUsuario, setDatosUsuario] = useState({
+        titulo: "",
+        tipo: "",
+        poster: "",
+        ingredientes: "",
+        preparacion: "",
+    });
+
 
     // UseEffect de montaje
     // useEffect(() => {
     //        }, []);
 
+
     // UseEffect de actualizacion
     // useEffect(() => {
     // });
 
-    // Funcion traer usuarios
+    // Funcipon que rellena datos
+    const rellenarDatos = (e) => {
+        setDatosUsuario({
+            ...datosUsuario,
+            [e.target.name]: e.target.value
+        })
+    };
+
+    // Funcion traer recetas
     const crearReceta = async () => {
         console.log("entro en funcion que crea receta")
 
@@ -26,19 +42,17 @@ const AdminCrearReceta = (props) => {
         };
 
         let body = {
-            titulo: "",
-            tipo: "",
-            poster: "",
-            ingredientes: "",
-            preparacion: ""
+            titulo: datosUsuario.titulo,
+            tipo: datosUsuario.tipo,
+            poster: datosUsuario.poster,
+            ingredientes: datosUsuario.ingredientes,
+            preparacion: datosUsuario.preparacion,
         }
 
         try {
 
-            let resultado = await axios.post("http://localhost:3300/recetas/registrar", body, config);
-            console.log("llamada a axios realizada")
-            console.log(resultado);
-            setRecetas(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+             await axios.post("http://localhost:3300/recetas/registrar", body, config);
+             console.log(body)
 
         } catch (error) {
             console.log(error);
@@ -56,11 +70,16 @@ const AdminCrearReceta = (props) => {
                 <div className="arribaCrear">CREA AQUI LA RECETA</div>
                 <div className="medioCrear">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
-                    <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:"/>
-                    <input type="text" name="tipo" id="tipo" title="tipo" placeholder="tipo:" />
-                    <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:" />
-                    <input type="text" name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:" />               
-                    <input type="preparacion" name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion" />                              
+                    <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" onChange={(e) => { rellenarDatos(e) }}
+/>
+                    <input type="text" name="tipo" id="tipo" title="tipo" placeholder="tipo:" onChange={(e) => { rellenarDatos(e) }}
+/>
+                    <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:"onChange={(e) => { rellenarDatos(e) }}
+ />
+                    <input type="text" name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:"onChange={(e) => { rellenarDatos(e) }}
+ />               
+                    <input type="preparacion" name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion"onChange={(e) => { rellenarDatos(e) }}
+ />                              
                 </div>
                 <div className="abajoRegistro">
                     {/* {msgError} */}

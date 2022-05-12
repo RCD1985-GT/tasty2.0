@@ -5,8 +5,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 const Admin = (props) => {
-  console.log("entro en Admin")
-
+  
   // Variables locales
   let navigate = useNavigate();
 

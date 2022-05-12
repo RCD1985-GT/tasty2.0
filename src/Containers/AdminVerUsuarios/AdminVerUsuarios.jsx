@@ -5,8 +5,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 const AdminVerUsuarios = (props) => {
-    console.log("entro en AdminVerUsuarios")
-
+  
     // Variables locales
     let navigate = useNavigate();
 
@@ -24,17 +23,14 @@ const AdminVerUsuarios = (props) => {
 
     // Funcion traer usuarios
     const traeUsuarios = async () => {
-        console.log("entro en funcion trae usuarios")
-
+       
         let config = {
             headers: { Authorization: `Bearer ${props.credenciales.token}` }
         };
 
         try {
-            console.log("llamo a axios")
+           
             let resultado = await axios.get("http://localhost:3300/usuarios", config);
-            console.log("llamada a axios realizada")
-            console.log(resultado);
             setUsuarios(resultado.data);
 
         } catch (error) {
@@ -43,8 +39,7 @@ const AdminVerUsuarios = (props) => {
     }
 
     if (props.credenciales?.usuario.rol === true) {
-        console.log("entro en mapeo")
-
+        
         return (
             <div className="contenidoUsuarios">
 
