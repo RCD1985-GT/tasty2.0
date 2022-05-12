@@ -4,7 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 const AdminCrearReceta = (props) => {
-    console.log("entro en AdminVerRecetas")
+    console.log("entro en AdminCrearRecetas")
 
     // Hook
     const [datosUsuario, setDatosUsuario] = useState({
@@ -58,7 +58,7 @@ const AdminCrearReceta = (props) => {
             console.log(error);
         }
     }
-
+// NO ENTRA AQUI
     if (props.credenciales?.usuario.rol === true) {
 
         console.log("usuario = true");
@@ -104,7 +104,7 @@ const AdminCrearReceta = (props) => {
 
 
 export default connect((state) => ({
-    detalles: state.detalles,
+    // detalles: state.detalles,
     credenciales: state.credenciales
 }))(AdminCrearReceta);
 
