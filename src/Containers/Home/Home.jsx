@@ -30,7 +30,7 @@ const Home = (props) => {
             <div className="contenedorTipos">
 
                 <div className="bloque1Tipos">
-                    <div className="bloque1Tipos1" onClick={()=>navegar("/:tipo","ensalada")}>ENSALADA</div>
+                    <div className="bloque1Tipos1" onClick={()=>navegar("/tipo","ensalada")}>ENSALADA</div>
                     <div className="bloque1Tipos2" onClick={()=>navegar("/:tipo","asado")}>ASADO</div>
                     <div className="bloque1Tipos3" onClick={()=>navegar("/:tipo","salsa")}>SALSA</div>
                     <div className="bloque1Tipos4" onClick={()=>navegar("/:tipo","crujiente")}>CRUJIENTE</div>

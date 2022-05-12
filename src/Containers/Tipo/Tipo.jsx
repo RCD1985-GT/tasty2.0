@@ -44,7 +44,7 @@ const Tipo = (props) => {
             let resultado = await axios.get(`http://localhost:3300/recetas/${props.tipo}`);
             console.log(resultado)
             setRecetas(resultado.data);
-            console.log("recetas recibidas y guardadas en Hook")
+            console.log("recetas recibidas y guardadas en Hook", props.tipo)
 
         } catch (error) {
             console.log(error);

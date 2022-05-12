@@ -10,6 +10,7 @@ import Tipo from './Containers/Tipo/Tipo';
 import Perfil from './Containers/Perfil/Perfil';
 import Admin from './Containers/Admin/Admin';
 import AdminVerUsuarios from './Containers/AdminVerUsuarios/AdminVerUsuarios';
+import AdminVerRecetas from './Containers/AdminVerRecetas/AdminVerRecetas';
 import AdminCrearReceta from './Containers/AdminCrearReceta/AdminCrearReceta';
 import DetallesReceta from './Containers/DetallesReceta/DetallesReceta';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/admin" element={<Admin/>} />
         <Route path="/adminVerUsuarios" element={<AdminVerUsuarios/>} />
         <Route path="/adminCrearReceta" element={<AdminCrearReceta/>} />
+        <Route path="/adminVerRecetas" element={<AdminVerRecetas/>} />
         <Route path="/detallesReceta" element={<DetallesReceta/>} />
         </Routes>
 

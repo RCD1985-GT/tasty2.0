@@ -11,7 +11,7 @@ const AdminVerRecetas = (props) => {
     let navigate = useNavigate();
 
     // Hook
-    const [recetasAdmin, setRecetasAdmin] = useState([]);
+    const [recetas, setRecetas] = useState([]);
 
     // UseEffect de montaje
     useEffect(() => {
@@ -32,10 +32,10 @@ const AdminVerRecetas = (props) => {
 
         try {
             console.log("llamo a axios")
-            let resultado = await axios.get("http://localhost:3300/recetas", config);
+            let resultado = await axios.get("http://localhost:3300/recetas");
             console.log("llamada a axios realizada")
             console.log(resultado);
-            setRecetasAdmin(resultado.data); 
+            setRecetas(resultado.data); 
 
         } catch (error) {
             console.log(error);
@@ -48,7 +48,7 @@ const AdminVerRecetas = (props) => {
         return (
             <div className="contenidoRecetas">
 
-                {recetasAdmin.map(receta => {
+                {recetas.map((receta) => {
 
                     return ( 
                         <div className="itemReceta" key={receta.id} >
@@ -76,7 +76,7 @@ const AdminVerRecetas = (props) => {
 
 
 export default connect((state) => ({
-    tipo: state.tipo,
+    // tipo: state.tipo,
     credenciales: state.credenciales
 }))(AdminVerRecetas);
 

@@ -24,7 +24,7 @@ const DetallesReceta = (props) => {
 	// });
 
 
-	// DONDE METO EL NAVIGATE A HOME?????
+	// DONDE METO EL NAVIGATE A HOME
 
 	const guardarReceta = async () => {
 
