@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import './AdminCrearReceta.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import {useNavigate} from 'react-router-dom';
 
 const AdminCrearReceta = (props) => {
     console.log("entro en AdminCrearRecetas")
+
+   // Variables locales
+   let navigate = useNavigate();
 
     // Hook
     const [datosUsuario, setDatosUsuario] = useState({
@@ -35,8 +39,7 @@ const AdminCrearReceta = (props) => {
 
     // Funcion traer recetas
     const crearReceta = async () => {
-        console.log("entro en funcion que guarda receta en BBDD") // NO ENTRA AQUI
-
+      
         let config = {
             headers: { Authorization: `Bearer ${props.credenciales.token}` }
         };
@@ -49,12 +52,11 @@ const AdminCrearReceta = (props) => {
             preparacion: datosUsuario.preparacion,
         }
 
-        
-
+       
         try {
 
              await axios.post(`http://localhost:3300/recetas/${props.credenciales.usuario.id}`, body, config);
-             console.log(body)
+            navigate('/admin');
 
         } catch (error) {
             console.log(error);
@@ -62,9 +64,7 @@ const AdminCrearReceta = (props) => {
     }
 // NO ENTRA AQUI
     if (props.credenciales?.usuario.rol === true) {
-
-        console.log("usuario = true");
-
+        
         return (
             <div className='diseñoCrearReceta'>
              
@@ -106,7 +106,6 @@ const AdminCrearReceta = (props) => {
 
 
 export default connect((state) => ({
-    // detalles: state.detalles,
     credenciales: state.credenciales
 }))(AdminCrearReceta);
 

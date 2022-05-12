@@ -30,9 +30,9 @@ const Perfil = (props) => {
     // Use effect 1
     useEffect(() => {
         if (props.credenciales.token === '') {
-            mostrarRecetasGuardadas();
+           
         }
-
+        mostrarRecetasGuardadas();
 
     }, [])
 
@@ -57,10 +57,10 @@ const Perfil = (props) => {
             headers: { Authorization: `Bearer ${props.credenciales.token}` }
         };
 
-        let id = props.credenciales.usuario.id;
-
-        let res = await axios.get(`http://localhost:3300/guardados/${id}`, config); // NO VA
+        
+        let res = await axios.get(`http://localhost:3300/guardados/usuario/${props.credenciales.usuario.id}`, config); // NO VA
         setRecetasGuardadas(res.data);
+        console.log("esto es resultao",res.data)
     }
 
     // // Funcion que actualiza usuario
@@ -115,9 +115,9 @@ const Perfil = (props) => {
                             return (
                                 <div className="contenidoFavoritas">
                                     <p>
-                                        Nombre: {receta.titulo}.<br />
-                                        {/* Ingredientes:{receta.ingredientes}<br />
-                                        Preparacion:{receta.preparacion} */}
+                                        Nombre: {receta.id}.<br />
+                                        Ingredientes:{receta.ingredientes}<br />
+                                        Preparacion:{receta.preparacion}
                                     </p>
                                 </div>
                             )
