@@ -115,7 +115,7 @@ const Perfil = (props) => {
                             return (
                                 <div className="contenidoFavoritas">
                                     <p>
-                                        Nombre: {receta.id}.<br />
+                                        titulo: {receta.id}<br />
                                         Ingredientes:{receta.ingredientes}<br />
                                         Preparacion:{receta.preparacion}
                                     </p>

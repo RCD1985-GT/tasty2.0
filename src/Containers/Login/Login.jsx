@@ -57,20 +57,9 @@ const Login = (props) => {
 
     // UseEffect de actualizacion
     useEffect(() => {
-        //Este useEffect se ejecutará por cada vez que se actualize el 
-        //componente. Es decir, cuando cambie un hook y por lo tanto se actualize el componente.
-
-        //Es peligroso cambiar hooks aqui, si no tenemos condicionales que eviten
-        //que entremos en bucles infinitos.
-        // console.log("Credenciales vale....", credenciales);
-
-
-
+       
         if (credenciales?.token !== undefined) {
-
-            setTimeout(() => {
                 navigate("/");
-            }, 3000);
         };
 
     });
