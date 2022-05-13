@@ -138,6 +138,8 @@ const Perfil = (props) => {
                                     {/* <p className="receta">{receta.ingredientes}</p>
                                 <p className="receta">{receta.preparacion}</p> */}
                                 </div>
+
+                                
                                 // <div className="cardReceta" key={receta.id}>
 
                                 //     <div className="cardRecetaIzquierda">

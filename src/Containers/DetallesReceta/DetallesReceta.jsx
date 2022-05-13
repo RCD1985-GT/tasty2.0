@@ -3,14 +3,14 @@ import './DetallesReceta.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const DetallesReceta = (props) => {
 
 	// Variables locales
 	let navigate = useNavigate();
 
-	
+
 	// Hook
 	const [recetasGuardadas, setRecetasGuardadas] = useState(false);
 
@@ -28,7 +28,7 @@ const DetallesReceta = (props) => {
 
 	const guardarReceta = async () => {
 
-		
+
 		let body = {
 			recetaId: props.detalles?.id,
 			usuarioId: props.credenciales?.usuario.id,
@@ -39,16 +39,16 @@ const DetallesReceta = (props) => {
 		}
 
 		let config = {
-		headers: { Authorization: `Bearer ${props.credenciales.token}` }
+			headers: { Authorization: `Bearer ${props.credenciales.token}` }
 		};
 		try {
 			console.log(body);
 			let resultado = await axios.post("http://localhost:3300/guardados/nuevo", body, config);
 			console.log(resultado);
 			setRecetasGuardadas(true);
-			setTimeout(()=>{
+			setTimeout(() => {
 				navigate("/");
-			},1200);
+			}, 1200);
 		} catch (error) {
 			console.log(error);
 		}
@@ -69,25 +69,26 @@ const DetallesReceta = (props) => {
 
 		return (
 			<div className="diseñoDetallesRecetas">
-				<div className="contenidoDetallesRecetas">
-					<div className="infoIzquierda">
-						{/* <img className="cartel" src={props.peliculaSeleccionada.poster} alt={props.peliculaSeleccionada.titulo}/> */}
-						AQUI VA FOTO
+				<div className="cardReceta">
+
+					<div className="cardRecetaIzquierda">
+						<div className="cardRecetaIzquierdaFoto">{props.detalles?.poster}</div>
+						<div className="cardRecetaIzquierdaTitulo">{props.detalles?.titulo}</div>
+						
 					</div>
 
-					<div className="infoDerecha">
-						<div className="detallesTitulo">{props.detalles?.titulo}</div>
-						<div className="detallesTipo">{props.detalles?.tipo}</div>
-						<div className="detallesIngredientes">{props.detalles?.ingredientes}</div>
-						<div className="detallesPreparacion">{props.detalles?.preparacion}</div>
-					
+					<div className="cardRecetaDerecha">
+						
+						<div className="cardRecetaDerechaIngredientes">Ingredientes: {props.detalles?.ingredientes}</div>
+						<div className="cardRecetaDerechaPreparacion">Preparación:{props.detalles?.preparacion}</div>
+
 						<button className='botonGuardar' onClick={() => guardarReceta()}>Guardar</button>
 					</div>
 				</div>
 			</div>
 		)
 	}
-	
+
 };
 
 export default connect((state) => ({

@@ -8,6 +8,17 @@
     width: 100vw;
 }
 
+
+.cardReceta {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60em;
+    height: 20em;
+   }
+/*
 .contenidoDetallesRecetas {
     background-color: green;
     height: 100%;
@@ -43,50 +54,50 @@
 } 
 
 .detallesTitulo {
-    height: 3em;
-    width: 6em;
+    height: 2em;
+    width: 10em;
     background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 1em;
-    border: 1px solid black;
-}
+    /* border-radius: 1em; */
+    /* border: 1px solid black;
+} */
 
-.detallesTipo {
-    height: 5em;
-    width: 15em;
+/* .detallesTipo {
+    height: 2em;
+    width: 10em;
     background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 1em;
-    border: 1px solid black;
+    /* border-radius: 1em; */
+    /* border: 1px solid black;
 }
 
 .detallesIngredientes {
     height: 5em;
-    width: 15em;
+    width: 25em;
     background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 1em;
-    border: 1px solid black;
-}
+    /* border-radius: 1em; */
+    /* border: 1px solid black; */
+/* } */ 
 
-.detallesPreparacion {
-    height: 5em;
-    width: 15em;
+/* .detallesPreparacion {
+    height: 15em;
+    width: 60em;
     background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 1em;
-    border: 1px solid black;
-}
+    /* border-radius: 1em; */
+    /* border: 1px solid black; */
+/* } */
 
