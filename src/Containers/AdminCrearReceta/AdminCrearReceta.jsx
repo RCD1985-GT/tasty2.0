@@ -12,9 +12,9 @@ const AdminCrearReceta = (props) => {
 
     // Hook
     const [datosUsuario, setDatosUsuario] = useState({
+        poster: "",
         titulo: "",
         tipo: "",
-        poster: "",
         ingredientes: "",
         preparacion: "",
     });
@@ -45,9 +45,9 @@ const AdminCrearReceta = (props) => {
         };
 
         let body = {
+            poster: datosUsuario.poster,
             titulo: datosUsuario.titulo,
             tipo: datosUsuario.tipo,
-            poster: datosUsuario.poster,
             ingredientes: datosUsuario.ingredientes,
             preparacion: datosUsuario.preparacion,
         }
@@ -72,16 +72,15 @@ const AdminCrearReceta = (props) => {
                 <div className="arribaCrear">CREA AQUI LA RECETA</div>
                 <div className="medioCrear">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
+                    <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:"onChange={(e) => { rellenarDatos(e) }}
+ />
                     <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" onChange={(e) => { rellenarDatos(e) }}
 />
                     <input type="text" name="tipo" id="tipo" title="tipo" placeholder="tipo:" onChange={(e) => { rellenarDatos(e) }}
-/>
-                    <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:"onChange={(e) => { rellenarDatos(e) }}
- />
-                    <input type="text" name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:"onChange={(e) => { rellenarDatos(e) }}
- />               
-                    <input type="preparacion" name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion"onChange={(e) => { rellenarDatos(e) }}
- />                              
+/>                    
+                    <textarea name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:"onChange={(e) => { rellenarDatos(e) }}></textarea>    
+
+                    <textarea name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion:"onChange={(e) => { rellenarDatos(e) }}></textarea>                          
                 </div>
                 <div className="abajoRegistro">
                     {/* {msgError} */}
