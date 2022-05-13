@@ -58,7 +58,7 @@ const Perfil = (props) => {
         };
 
 
-        let res = await axios.get(`http://localhost:3300/guardados/usuario/${props.credenciales.usuario.id}`, config); // NO VA
+        let res = await axios.get(`http://localhost:3300/guardados/usuario/${props.credenciales.usuario.id}`, config); 
         setRecetasGuardadas(res.data);
         console.log("esto es resultao", res.data)
     }
@@ -101,10 +101,10 @@ const Perfil = (props) => {
                 <p>TUS DATOS PERSONALES:</p>
                 <div className="contenidoDatos">
                     <div className="datos"><b>Nombre: </b>{props.credenciales.usuario.nombre}</div>
-                    <div className="datos"><b>Apellidos: </b>{props.credenciales.usuario.apellido}</div>
+                    <div className="datos"><b>Apellido: </b>{props.credenciales.usuario.apellido}</div>
                     <div className="datos"><b>Email: </b>{props.credenciales.usuario.email}</div>
-                    <div className="datos"><b>Contraseña nueva:</b><input className='' type="text" name="contraseña" id="contraseña" title="contraseña" placeholder="Nueva Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
-                    <div className="datosContraseña">Actualizar</div>
+                    {/* <div className="datos"><b>Contraseña nueva:</b><input className='' type="text" name="contraseña" id="contraseña" title="contraseña" placeholder="Nueva Contraseña" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+                    <div className="datosContraseña">Actualizar</div> */}
                     {/* onClick={() => updateUser()} */}
                 </div>
             </div>
