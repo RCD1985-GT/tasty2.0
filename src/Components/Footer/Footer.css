@@ -2,20 +2,20 @@
     background-color: #060613;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     height: 15em;
     width: 100%; 
+    box-sizing: border-box;
    }
 
-/* ARRIBA FOOTER */
-.arribaFooter {
+.contenidoFooter {
     /* background-color: black; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 15em; 
+    height: 5em; 
     border-top: 2px solid whitesmoke;
     border-bottom: 2px solid whitesmoke;
     box-sizing: border-box;
@@ -23,18 +23,8 @@
     width: 100%;
     }
 
-.arribaIzquierdaFooter {
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 3em;
-    width: 20em;
-    border-radius: 2em 2em 2em 2em;
-    }
 
-.arribaDerechaFooter {
+.iconosFooter {
     background: rgb(200,255,235);
     background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
     display: flex;
@@ -44,52 +34,9 @@
     height: 3em;
     width: 20em;
     border-radius: 2em 2em 2em 2em;
+    box-sizing: border-box;
    }
 
-
- /* ABAJO FOOTER */
-
-.abajoFooter {
-    background-color: #060613;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 15em; 
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1em;
-   
-    
-}
-
-.caja1{
-    /* background-color: grey; */
-    height: 10em;
-    width: 20em;
-    /* background-image: url(../../img/FUE.png); */
-    background-repeat: no-repeat;
-    background-position: center;
-   
-}
-
-.caja2{
-    /* background-color: grey; */
-    height: 10em;
-    width: 20em;
-    /* background-image: url(../../img/FGE.png); */
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.caja3{
-    /* background-color: grey; */
-    height: 10em;
-    width: 20em; 
-    /* background-image: url(../../img/FGC.png); */
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 /* ICONOS */
 
