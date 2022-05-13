@@ -31,6 +31,10 @@ const DetallesReceta = (props) => {
 		let body = {
 			recetaId: props.detalles?.id,
 			usuarioId: props.credenciales?.usuario.id,
+			titulo: props.detalles?.titulo,
+			tipo: props.detalles?.tipo,
+			ingredientes: props.detalles?.ingredientes,
+			preparacion: props.detalles?.preparacion,
 		}
 
 		let config = {
@@ -70,6 +74,9 @@ const DetallesReceta = (props) => {
 					<div className="infoDerecha">
 						<div className="detallesTitulo">{props.detalles?.titulo}</div>
 						<div className="detallesTipo">{props.detalles?.tipo}</div>
+						<div className="detallesIngredientes">{props.detalles?.ingredientes}</div>
+						<div className="detallesPreparacion">{props.detalles?.preparacion}</div>
+					
 						<button className='botonGuardar' onClick={() => guardarReceta()}>Guardar</button>
 					</div>
 				</div>
