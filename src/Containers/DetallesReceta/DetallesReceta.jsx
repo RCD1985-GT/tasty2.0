@@ -28,6 +28,7 @@ const DetallesReceta = (props) => {
 
 	const guardarReceta = async () => {
 
+		
 		let body = {
 			recetaId: props.detalles?.id,
 			usuarioId: props.credenciales?.usuario.id,
@@ -45,7 +46,9 @@ const DetallesReceta = (props) => {
 			let resultado = await axios.post("http://localhost:3300/guardados/nuevo", body, config);
 			console.log(resultado);
 			setRecetasGuardadas(true);
-			
+			setTimeout(()=>{
+				navigate("/");
+			},1200);
 		} catch (error) {
 			console.log(error);
 		}
@@ -56,7 +59,8 @@ const DetallesReceta = (props) => {
 		return (
 			<div className="diseñoDetallesRecetas">
 				<div className="contenedorDetallesRecetas">
-					Gracias por guardar {props.detalles?.titulo};
+					<p>La receta ha sido guardada en tu perfil</p>
+					{/* {props.detalles?.titulo}  */}
 				</div>
 			</div>
 		);
@@ -83,7 +87,7 @@ const DetallesReceta = (props) => {
 			</div>
 		)
 	}
-
+	
 };
 
 export default connect((state) => ({
