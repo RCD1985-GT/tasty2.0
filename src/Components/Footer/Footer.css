@@ -12,17 +12,16 @@
 .contenidoFooter {
     /* background-color: black; */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 5em; 
+    height: 10em; 
     border-top: 2px solid whitesmoke;
     border-bottom: 2px solid whitesmoke;
     box-sizing: border-box;
     padding: 1em;
     width: 100%;
     }
-
 
 .iconosFooter {
     background: rgb(200,255,235);
@@ -65,4 +64,17 @@
     border-radius: 2em;
     /* background-image: url(../../img/logoFacebookPeq.png); */
     background-position: center;
+}
+
+.contactoFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
