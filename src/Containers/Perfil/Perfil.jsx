@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { MODIFY_credenciales } from '../../redux/types';
+import { DETALLES } from '../../redux/types';
 import axios from 'axios';
 
 import "./Perfil.css";
@@ -26,6 +27,16 @@ const Perfil = (props) => {
             [e.target.name]: e.target.value
         })
     };
+
+    // Funcion escoger receta
+    const escogeReceta = (receta) => {
+        console.log(receta);
+        //Guardamos la receta escogida en REDUX 
+        props.dispatch({ type: DETALLES, payload: receta });
+        console.log("receta guardada en Redux")
+        // y redirigimos a la vista de detalles Receta con navigate
+        navigate("/detallesReceta");
+    }
 
     // Use effect 1
     useEffect(() => {
@@ -58,7 +69,7 @@ const Perfil = (props) => {
         };
 
 
-        let res = await axios.get(`http://localhost:3300/guardados/usuario/${props.credenciales.usuario.id}`, config); 
+        let res = await axios.get(`http://localhost:3300/guardados/usuario/${props.credenciales.usuario.id}`, config);
         setRecetasGuardadas(res.data);
         console.log("esto es resultao", res.data)
     }
@@ -117,23 +128,35 @@ const Perfil = (props) => {
                     {
                         recetasGuardadas.map(receta => {
                             return (
-                                <div className="cardReceta" key={receta.id} >
 
-                                    <div className="cardRecetaIzquierda">
-                                        <div className="cardRecetaIzquierdaFoto"> Foto:  {receta.poster}<br /></div>
-                                        <div className="cardRecetaIzquierdaTitulo"> Titulo: {receta.titulo}<br /></div>
-                                        {/* Titulo: {receta.titulo}<br />
-                                        Tipo: {receta.tipo}<br /> */}
-                                    </div>
+                                <div className="itemReceta" key={receta.id} >
+                                    <p className="receta">{receta.poster}</p>
+                                    <p className="receta">{receta.titulo}</p>
+                                    <p className="receta">{receta.tipo}</p>
+                                    <div className="info" onClick={() => escogeReceta(receta)}>INFO</div>
                                     
-                                    <div className="cardRecetaDerecha">
-                                        {/* Titulo: {receta.titulo}<br />
-                                        Tipo: {receta.tipo}<br /> */}
-                                        <div className="cardRecetaDerechaIngredientes"> Ingredientes:{receta.ingredientes}</div>
-                                        <div className="cardRecetaDerechaPreparacion">Preparacion:{receta.preparacion}</div>
-                                       
-                                    </div>
+                                    {/* <p className="receta">{receta.ingredientes}</p>
+                                <p className="receta">{receta.preparacion}</p> */}
                                 </div>
+                                // <div className="cardReceta" key={receta.id}>
+
+                                //     <div className="cardRecetaIzquierda">
+                                //         <div className="cardRecetaIzquierdaFoto"> Foto:  {receta.poster}<br /></div>
+                                //         <div className="cardRecetaIzquierdaTitulo"> Titulo: {receta.titulo}<br /></div>
+                                //         <div className="info" onClick={() => escogeReceta(receta)}>INFO</div>
+                                //         {/* Titulo: {receta.titulo}<br />
+                                //         Tipo: {receta.tipo}<br /> */}
+                                //     </div>
+
+                                //     <div className="cardRecetaDerecha">
+                                //         {/* Titulo: {receta.titulo}<br />
+                                //         Tipo: {receta.tipo}<br /> */}
+                                //         <div className="cardRecetaDerechaIngredientes"> Ingredientes:{receta.ingredientes}</div>
+                                //         <div className="cardRecetaDerechaPreparacion">Preparacion:{receta.preparacion}</div>
+
+                                //     </div>
+
+                                // </div>
                             )
                         })
                     }
