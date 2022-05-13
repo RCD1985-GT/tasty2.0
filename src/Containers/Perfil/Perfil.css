@@ -5,6 +5,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    
 }
 
 .contenedorDatos {
@@ -52,7 +53,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: lightpink;
+    /* background-color: lightpink; */
     width: 80%;
     height: 100%;
     box-sizing: border-box;

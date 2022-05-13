@@ -13,9 +13,9 @@ const Footer = () => {
 				</div>
 			
 			
-			<div className="contactoFooter">
+			{/* <div className="contactoFooter">
 				<a className='contacto' href="#"> Contacto</a>
-			</div>
+			</div> */}
 			</div>	
 		</div>
 	);
