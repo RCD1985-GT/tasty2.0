@@ -61,8 +61,7 @@
     padding: 2em
 }
 
-
-.cardReceta {
+/* .cardReceta {
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -70,8 +69,8 @@
     align-items: center;
     width: 60em;
     height: 20em;
-   }
-
+   } */
+/* 
    .cardRecetaIzquierda {
     border: 1px solid black;
     display: flex;
@@ -120,7 +119,7 @@
     align-items:center ;
     width: 40em;
     height: 17em;   
-}
+} */
 
 .borrar {
     display: flex;

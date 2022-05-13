@@ -74,37 +74,6 @@ const Perfil = (props) => {
         console.log("esto es resultao", res.data)
     }
 
-    // // Funcion que actualiza usuario
-    // const actualizarUsuario = async () => {
-
-    //     let config = {
-    //         headers: { Authorization: `Bearer ${props.credenciales.token}` }
-    //     };
-
-    //     let body = {
-    //         id: props.credenciales.usuario.id,
-    //         oldPassword: "tete",
-    //         newPassword: datosUsuario.newPassword,
-    //     }
-
-    //     console.log(body, "ESTO ES BODYYYYYYYY");
-    //     console.log(config, "ESTO ES CONFIGGGGGGGG");
-
-
-    //     try {
-    //         //Hacemos el update en la base de datos
-    //         let res = await axios.put(`http://localhost:5000/users/`, body, config);
-    //         console.log("your password has been changed successfully");
-    //         if (res) {
-    //             //Guardamos en redux
-    //             // props.dispatch({ type: MODIFY_credenciales, payload: datosUsuario });
-    //         }
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-
-    // }
-
     return (
         <div className="perfil">
 
@@ -121,8 +90,6 @@ const Perfil = (props) => {
             </div>
 
             <div className="contenedorFavoritas">
-                {/* <p>{props.credenciales.usuario.nombre},estas son tus recetas favoritas:</p> */}
-
                 <p>TUS RECETAS FAVORITAS</p>
                 <div className="contenidoFavoritas">
                     {
@@ -134,40 +101,13 @@ const Perfil = (props) => {
                                     <p className="receta">{receta.titulo}</p>
                                     <p className="receta">{receta.tipo}</p>
                                     <div className="info" onClick={() => escogeReceta(receta)}>INFO</div>
-                                    
-                                    {/* <p className="receta">{receta.ingredientes}</p>
-                                <p className="receta">{receta.preparacion}</p> */}
                                 </div>
-
-                                
-                                // <div className="cardReceta" key={receta.id}>
-
-                                //     <div className="cardRecetaIzquierda">
-                                //         <div className="cardRecetaIzquierdaFoto"> Foto:  {receta.poster}<br /></div>
-                                //         <div className="cardRecetaIzquierdaTitulo"> Titulo: {receta.titulo}<br /></div>
-                                //         <div className="info" onClick={() => escogeReceta(receta)}>INFO</div>
-                                //         {/* Titulo: {receta.titulo}<br />
-                                //         Tipo: {receta.tipo}<br /> */}
-                                //     </div>
-
-                                //     <div className="cardRecetaDerecha">
-                                //         {/* Titulo: {receta.titulo}<br />
-                                //         Tipo: {receta.tipo}<br /> */}
-                                //         <div className="cardRecetaDerechaIngredientes"> Ingredientes:{receta.ingredientes}</div>
-                                //         <div className="cardRecetaDerechaPreparacion">Preparacion:{receta.preparacion}</div>
-
-                                //     </div>
-
-                                // </div>
                             )
                         })
                     }
                 </div>
-
             </div>
-
             <div>
-
             </div>
         </div>
     )
