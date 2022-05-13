@@ -114,7 +114,6 @@ const Perfil = (props) => {
                         recetasGuardadas.map(receta => {
                             return (
                                 <div className="contenidoFavoritas" key={receta.id} >
-                                        Id: {receta.id}<br/>
                                         Foto:  {receta.poster}<br/>
                                         Titulo: {receta.titulo}<br/>
                                         Tipo: {receta.tipo}<br/>
