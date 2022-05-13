@@ -48,11 +48,11 @@ const AdminVerRecetas = (props) => {
 
                     return (
                         <div className="itemReceta" key={receta.id} >
+                            <p className="receta">{receta.poster}</p>
                             <p className="receta">{receta.titulo}</p>
                             <p className="receta">{receta.tipo}</p>
-                            <p className="receta">{receta.poster}</p>
-                            <p className="receta">{receta.ingredientes}</p>
-                            <p className="receta">{receta.preparacion}</p>
+                            {/* <p className="receta">{receta.ingredientes}</p>
+                            <p className="receta">{receta.preparacion}</p> */}
                         </div>
                     )
                 })
