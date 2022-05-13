@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import './Tipo.css';
-import { DETALLES } from '../../redux/types'; 
+import { DETALLES } from '../../redux/types';
 
 
 
@@ -32,7 +32,7 @@ const Tipo = (props) => {
         //Guardamos la receta escogida en REDUX 
         props.dispatch({ type: DETALLES, payload: receta });
         console.log("receta guardada en Redux")
-    // y redirigimos a la vista de detalles Receta con navigate
+        // y redirigimos a la vista de detalles Receta con navigate
         navigate("/detallesReceta");
     }
 
@@ -55,9 +55,14 @@ const Tipo = (props) => {
             {recetas.map(item => {
                 return (
                     <div className="itemTipo" key={item.id} onClick={() => escogeReceta(item)} >
+                        <div className="itemfoto">{item.poster}</div>
+                        <div className="itemTitulo">{item.titulo}</div>
+                        {/* <div className="itemTipo">{item.tipo}</div> */}
+
+                        {/* <p className="titulo">Foto{item.poster}</p>
                         <p className="titulo">Titulo:{item.titulo}</p>
-                        <p className="titulo">Tipo:{item.tipo}</p>
-                        <p className="titulo">Foto{item.poster}</p>
+                        <p className="titulo">Tipo:{item.tipo}</p> */}
+
                         {/* <p className="titulo">Ingredientes:{item.ingredientes}</p>
                         <p className="titulo">Preparacion:{item.preparacion}</p> */}
                     </div>
