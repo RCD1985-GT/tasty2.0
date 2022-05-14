@@ -1,5 +1,3 @@
-
-
 .diseñoHome {
     display: flex;
     flex-direction: column;
@@ -8,7 +6,7 @@
     height: 100vh;
     width: 100vw;
     background-color: #060613;
- 
+
 }
 
 .contenedorInfo {
@@ -30,12 +28,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    background: rgb(200, 255, 235);
+    background: linear-gradient(180deg, rgba(200, 255, 235, 1) 4%, rgba(94, 255, 195, 1) 55%, rgba(45, 124, 94, 1) 94%);
 }
+
 .contenedorTipos {
-    height: 70%;
-    width: 70%;
+    height: 100%;
+    width: 60em;
     box-sizing: border-box;
     padding: 1em;
     display: flex;
@@ -47,13 +46,13 @@
     row-gap: 3em;
     column-gap: 3em;
 
-   }
+}
 
 
 /* BLOQUE 1 */
 
-.bloque1Tipos{
-    height: 25%;
+.bloque1Tipos {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -62,54 +61,71 @@
     column-gap: 1em;
     cursor: pointer;
     color: antiquewhite;
+   
 }
 
 .bloque1Tipos1 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/ensalada.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 
 .bloque1Tipos2 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
-} 
+    background-image: url(../../../public/img/asado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
-.bloque1Tipos3 { 
+.bloque1Tipos3 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
-} 
+    background-image: url(../../../public/img/salsa.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 
 .bloque1Tipos4 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/crujiente.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 
 /* BLOQUE 2 */
 
-.bloque2Tipos{
-    height: 25%;
+.bloque2Tipos {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -126,48 +142,64 @@
 .bloque2Tipos1 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/crudo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 
 .bloque2Tipos2 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/vegano.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .bloque2Tipos3 {
     height: 100%;
     width: 25%;
-    border: 2px solid whitesmoke;
+    /* border: 2px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/chile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .bloque2Tipos4 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/especias\ .png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 /* BLOQUE 3 */
 
-.bloque3Tipos{
-    height: 25%;
+.bloque3Tipos {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -181,48 +213,65 @@
 .bloque3Tipos1 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/pescado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 
 .bloque3Tipos2 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/carne.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .bloque3Tipos3 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/plancha.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-position: center;
 }
 
 .bloque3Tipos4 {
     height: 100%;
     width: 25%;
-    border: 3px solid whitesmoke;
+    /* border: 3px solid whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
+    background-image: url(../../../public/img/cocido.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 /* BLOQUE 4 */
 
-.bloque4Tipos{
-    height: 25%;
+/* .bloque4Tipos {
+    height: 50%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -275,4 +324,4 @@
     justify-content: center;
     align-items: center;
     border-radius: 1em;
-}
+} */
