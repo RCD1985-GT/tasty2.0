@@ -59,7 +59,7 @@ const DetallesReceta = (props) => {
 		return (
 			<div className="diseñoDetallesRecetas">
 				<div className="contenedorDetallesRecetas">
-					<p>La receta ha sido guardada en tu perfil</p>
+					<p className='contenedorDetallesRecetasTexto'>La receta ha sido guardada en tu perfil</p>
 					{/* {props.detalles?.titulo}  */}
 				</div>
 			</div>

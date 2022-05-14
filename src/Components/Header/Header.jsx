@@ -44,6 +44,9 @@ const Header = (props) => {
 		return (
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className='infoTipos'>
+                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                </div>
 				<div className="entrar">
 					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
 					<div className="link" onClick={() => logOut()}>Logout</div>
@@ -56,6 +59,9 @@ const Header = (props) => {
 		return (
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className='infoTipos'>
+                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                </div>
 				<div className="entrar">
 					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
 					<div className="link" onClick={() => logOut()}>Logout</div>

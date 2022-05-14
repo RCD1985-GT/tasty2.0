@@ -1,5 +1,4 @@
 
-
 .contenedorHeader {
     background-color: #060613;
     display: flex;
@@ -12,15 +11,12 @@
     box-sizing: border-box;
     padding: 1em;
     padding-top: 3em;
-    padding-bottom: 3em;
-    
-    
-
+    padding-bottom: 3em; 
 }
 
 .logo {
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    background-color: lightgray;
+    /* background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +31,7 @@
 }
 
 .entrar {
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    background-color: lightgray;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,6 +65,5 @@
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    background: rgb(200, 255, 235);
-    background: linear-gradient(180deg, rgba(200, 255, 235, 1) 4%, rgba(94, 255, 195, 1) 55%, rgba(45, 124, 94, 1) 94%);
+    background-color: lightgray;
 }
