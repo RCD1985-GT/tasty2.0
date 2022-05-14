@@ -29,6 +29,9 @@ const Header = (props) => {
 		return (
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
+				<div className='infoTipos'>
+                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                </div>
 				<div className="entrar">
 					<div className="registro" onClick={() => navegar("/register")}>Registro</div>
 					<div className="acceso" onClick={() => navegar("/login")} >Acceso</div>

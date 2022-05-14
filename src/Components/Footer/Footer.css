@@ -41,7 +41,7 @@
 /* ICONOS */
 
 .iconoFacebook {
-    background-color: white;
+    background-color: lightgrey;
     height: 2em;
     width: 2em;
     border-radius: 2em;
@@ -53,7 +53,7 @@
 }
 
 .iconoInstagram {
-    background-color: white;
+    background-color: lightgrey;
     height: 2em;
     width: 2em;
     border-radius: 2em; 
@@ -65,7 +65,7 @@
 }
 
 .iconoTwitter {
-    background-color: white;
+    background-color: lightgrey;
     height: 2em;
     width: 2em;
     border-radius: 2em;

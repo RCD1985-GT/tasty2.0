@@ -23,9 +23,9 @@ const Home = (props) => {
         <div className='diseñoHome'>
 
             <div className="contenedorInfo">
-                <div className='infoTipos'>
+                {/* <div className='infoTipos'>
                     <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
-                </div>
+                </div> */}
             </div>
             <div className="contenedorTipos">
 
