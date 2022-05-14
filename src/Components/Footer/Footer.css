@@ -7,6 +7,7 @@
     height: 6em;
     width: 100%; 
     box-sizing: border-box;
+    
    }
 
 .contenidoFooter {
@@ -24,8 +25,8 @@
     }
 
 .iconosFooter {
-    background: rgb(200,255,235);
-    background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%);
+    /* background: rgb(200,255,235); */
+    /* background: linear-gradient(180deg, rgba(200,255,235,1) 4%, rgba(94,255,195,1) 55%, rgba(45,124,94,1) 94%); */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -44,8 +45,11 @@
     height: 2em;
     width: 2em;
     border-radius: 2em;
-    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-image: url(../../../public/img/facebook.png);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  
 }
 
 .iconoInstagram {
@@ -53,8 +57,11 @@
     height: 2em;
     width: 2em;
     border-radius: 2em; 
-    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-image: url(../../../public/img/instagram\ .png);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
 }
 
 .iconoTwitter {
@@ -62,8 +69,11 @@
     height: 2em;
     width: 2em;
     border-radius: 2em;
-    /* background-image: url(../../img/logoFacebookPeq.png); */
+    background-image: url(../../../public/img/gorjeo\ .png);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
 }
 
 .contactoFooter {
