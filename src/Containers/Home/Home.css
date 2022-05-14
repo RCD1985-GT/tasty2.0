@@ -29,8 +29,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    background: rgb(200, 255, 235);
-    background: linear-gradient(180deg, rgba(200, 255, 235, 1) 4%, rgba(94, 255, 195, 1) 55%, rgba(45, 124, 94, 1) 94%);
+    background-color: lightgrey;
 }
 
 .contenedorTipos {

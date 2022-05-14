@@ -30,7 +30,7 @@ const Header = (props) => {
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
 				<div className='infoTipos'>
-                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                    Bienvenido a TASTY...un recetario donde guiarte por tus instintos
                 </div>
 				<div className="entrar">
 					<div className="registro" onClick={() => navegar("/register")}>Registro</div>
@@ -45,7 +45,7 @@ const Header = (props) => {
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
 				<div className='infoTipos'>
-                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                    Bienvenido a TASTY...un recetario donde guiarte por tus instintos
                 </div>
 				<div className="entrar">
 					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
@@ -60,7 +60,7 @@ const Header = (props) => {
 			<div className="contenedorHeader">
 				<div className="logo" onClick={() => navegar("/")}><b>Tasty</b></div>
 				<div className='infoTipos'>
-                    <b>Bienvenido a TASTY...un recetario donde guiarte por tus instintos</b>
+                    Bienvenido a TASTY...un recetario donde guiarte por tus instintos
                 </div>
 				<div className="entrar">
 					<div className="link" onClick={() => navegar('/perfil')} >{props.credenciales?.usuario.nombre} {props.credenciales?.usuario.apellido}</div>
