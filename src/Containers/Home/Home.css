@@ -12,13 +12,14 @@
 .contenedorInfo {
     height: 5em;
     width: 100%;
-    background-color: yellow;
+    background-color: lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(../../img/fondoVideoclub.png);   */
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../../../public/img/tenedores.png);  
+    background-repeat: repeat;
+    /* background-size: cover; */
+    background-size: contain;
 }
 
 .infoTipos {
@@ -34,7 +35,7 @@
 
 .contenedorTipos {
     height: 100%;
-    width: 60em;
+    width: 100%;
     box-sizing: border-box;
     padding: 1em;
     display: flex;
@@ -45,6 +46,7 @@
     /* margin-bottom: 2em; */
     row-gap: 3em;
     column-gap: 3em;
+    flex-wrap: nowrap;
 
 }
 
