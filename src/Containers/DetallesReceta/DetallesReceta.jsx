@@ -57,7 +57,7 @@ const DetallesReceta = (props) => {
 	if (recetasGuardadas === true) { // SI SE GUARDA RECETA TE DEVUELVE MENSAJE
 
 		return (
-			<div className="diseñoDetallesRecetas">
+			<div className="diseñoDetallesRecetas2">
 				<div className="contenedorDetallesRecetas">
 					<p className='contenedorDetallesRecetasTexto'>La receta ha sido guardada en tu perfil</p>
 					{/* {props.detalles?.titulo}  */}

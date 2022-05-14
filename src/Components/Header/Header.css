@@ -10,8 +10,9 @@
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
-    padding-top: 3em;
-    padding-bottom: 3em; 
+    padding-top: 4em;
+    padding-bottom: 5em; 
+   
 }
 
 .logo {
@@ -60,7 +61,7 @@
 
 .infoTipos {
     height: 4em;
-    width: 15em;
+    width: 20em;
     display: flex;
     align-items: center;
     justify-content: center;
