@@ -41,11 +41,11 @@
 /* ICONOS */
 
 .iconoFacebook {
-    background-color: black;
+    background-color: white;
     height: 2em;
     width: 2em;
     border-radius: 2em;
-    background-image: url(../../../public/img/facebook.png);
+    background-image: url(../../../public/img/fb.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -53,11 +53,11 @@
 }
 
 .iconoInstagram {
-    background-color: black;
+    background-color: white;
     height: 2em;
     width: 2em;
     border-radius: 2em; 
-    background-image: url(../../../public/img/instagram\ .png);
+    background-image: url(../../../public/img/is.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -65,11 +65,11 @@
 }
 
 .iconoTwitter {
-    background-color: black;
+    background-color: white;
     height: 2em;
     width: 2em;
     border-radius: 2em;
-    background-image: url(../../../public/img/gorjeo\ .png);
+    background-image: url(../../../public/img/tw.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

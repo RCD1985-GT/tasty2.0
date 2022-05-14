@@ -30,31 +30,29 @@ const Home = (props) => {
             <div className="contenedorTipos">
 
                 <div className="bloque1Tipos">
-                    <div className="bloque1Tipos1" onClick={() => navegar("/tipo", "ensalada")}>ENSALADA</div>
-                    <div className="bloque1Tipos2" onClick={() => navegar("/:tipo", "asado")}>ASADO</div>
-                    <div className="bloque1Tipos3" onClick={() => navegar("/:tipo", "salsa")}>SALSA</div>
-                    <div className="bloque1Tipos4" onClick={() => navegar("/:tipo", "crujiente")}>CRUJIENTE</div>
+                    <div className="bloque1Tipos1" onClick={() => navegar("/tipo", "ensalada")}></div>
+                    <div className="bloque1Tipos2" onClick={() => navegar("/:tipo", "asado")}></div>
+                    <div className="bloque1Tipos3" onClick={() => navegar("/:tipo", "salsa")}></div>
+                    <div className="bloque1Tipos4" onClick={() => navegar("/:tipo", "crujiente")}></div>
                 </div>
 
                 <div className="bloque2Tipos">
-                    <div className="bloque2Tipos1" onClick={() => navegar("/:tipo", "crudo")}>CRUDO</div>
-                    <div className="bloque2Tipos2" onClick={() => navegar("/:tipo", "vegano")}>VEGANO</div>
-                    <div className="bloque2Tipos3" onClick={() => navegar("/:tipo", "picante")}>PICANTE</div>
-                    <div className="bloque2Tipos4" onClick={() => navegar("/:tipo", "especiado")}>ESPECIADO</div>
+                    <div className="bloque2Tipos1" onClick={() => navegar("/:tipo", "crudo")}></div>
+                    <div className="bloque2Tipos2" onClick={() => navegar("/:tipo", "vegano")}></div>
+                    <div className="bloque2Tipos3" onClick={() => navegar("/:tipo", "picante")}></div>
+                    <div className="bloque2Tipos4" onClick={() => navegar("/:tipo", "especiado")}></div>
                 </div>
 
                 <div className="bloque3Tipos">
-                    <div className="bloque3Tipos1" onClick={() => navegar("/:tipo", "pescado")}>PESCADO</div>
-                    <div className="bloque3Tipos2" onClick={() => navegar("/:tipo", "carne")}>CARNE</div>
-                    <div className="bloque3Tipos3" onClick={() => navegar("/:tipo", "plancha")}>PLANCHA</div>
-                    <div className="bloque3Tipos4" onClick={() => navegar("/:tipo", "cocido")}>COCIDO</div>
+                    <div className="bloque3Tipos1" onClick={() => navegar("/:tipo", "pescado")}></div>
+                    <div className="bloque3Tipos2" onClick={() => navegar("/:tipo", "carne")}></div>
+                    <div className="bloque3Tipos3" onClick={() => navegar("/:tipo", "plancha")}></div>
+                    <div className="bloque3Tipos4" onClick={() => navegar("/:tipo", "cocido")}></div>
                 </div>
 
             </div>
 
-            <div className="contenedorInfo">
-               
-            </div>
+            <div className="contenedorInfo"></div>
         </div>
     )
 };
