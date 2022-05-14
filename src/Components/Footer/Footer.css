@@ -17,8 +17,8 @@
     justify-content: space-around;
     align-items: center;
     height: 10em; 
-    border-top: 2px solid whitesmoke;
-    border-bottom: 2px solid whitesmoke;
+    /* border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke; */
     box-sizing: border-box;
     padding: 1em;
     width: 100%;

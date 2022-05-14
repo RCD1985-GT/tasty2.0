@@ -69,8 +69,11 @@ const DetallesReceta = (props) => {
 
 		return (
 			<div className="diseñoDetallesRecetas">
+				 
+				 <div className="contenedorInfo"></div>
 				<div className="cardReceta">
 
+				<div className="contenedorInfo"></div>
 					<div className="cardRecetaIzquierda">
 						<div className="cardRecetaIzquierdaFoto">{props.detalles?.poster}</div>
 						<div className="cardRecetaIzquierdaTitulo">{props.detalles?.titulo}</div>
@@ -85,6 +88,8 @@ const DetallesReceta = (props) => {
 						<button className='botonGuardar' onClick={() => guardarReceta()}>Guardar</button>
 					</div>
 				</div>
+				
+				<div className="contenedorInfo"></div>
 			</div>
 		)
 	}

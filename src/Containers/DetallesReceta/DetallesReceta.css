@@ -1,11 +1,12 @@
 
 .diseñoDetallesRecetas {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30em;
+    height: 100vh;
     width: 100vw;
+    background-color: #060613;
 }
 
 .cardReceta {
@@ -19,6 +20,8 @@
     border-radius: 1em;
     border: 3px solid white;
     background-color: lightgrey;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
    
 
@@ -74,4 +77,17 @@
     align-items:center ;
     width: 40em;
     height: 17em;   
+}
+
+.contenedorInfo {
+    height: 5em;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../public/img/tenedores.png);  
+    background-repeat: repeat;
+    /* background-size: cover; */
+    background-size: contain;
 }

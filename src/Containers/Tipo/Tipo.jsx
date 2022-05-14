@@ -51,7 +51,9 @@ const Tipo = (props) => {
         }
     };
     return (
+        
         <div className="contenidoTipo">
+             <div className="contenedorInfo"></div>
             {recetas.map(item => {
                 return (
                     <div className="itemTipo" key={item.id} onClick={() => escogeReceta(item)} >
@@ -69,6 +71,7 @@ const Tipo = (props) => {
                 )
             })
             }
+             <div className="contenedorInfo"></div>
         </div>
     )
 
