@@ -6,8 +6,6 @@ import axios from 'axios';
 import './Tipo.css';
 import { DETALLES } from '../../redux/types';
 
-
-
 const Tipo = (props) => {
 
     // Navegar
@@ -24,7 +22,6 @@ const Tipo = (props) => {
     useEffect(() => {
         traeTipo();
     }, []);
-
 
     // Funcion escoger receta
     const escogeReceta = (receta) => {
@@ -51,30 +48,21 @@ const Tipo = (props) => {
         }
     };
     return (
-        
+
         <div className="contenidoTipo">
-             <div className="contenedorInfo"></div>
+            <div className="contenedorInfo"></div>
             {recetas.map(item => {
                 return (
                     <div className="itemTipo" key={item.id} onClick={() => escogeReceta(item)} >
                         <div className="itemfoto">{item.poster}</div>
                         <div className="itemTitulo">{item.titulo}</div>
-                        {/* <div className="itemTipo">{item.tipo}</div> */}
-
-                        {/* <p className="titulo">Foto{item.poster}</p>
-                        <p className="titulo">Titulo:{item.titulo}</p>
-                        <p className="titulo">Tipo:{item.tipo}</p> */}
-
-                        {/* <p className="titulo">Ingredientes:{item.ingredientes}</p>
-                        <p className="titulo">Preparacion:{item.preparacion}</p> */}
                     </div>
                 )
             })
             }
-             <div className="contenedorInfo"></div>
+            <div className="contenedorInfo"></div>
         </div>
     )
-
 }
 
 export default connect((state) => ({

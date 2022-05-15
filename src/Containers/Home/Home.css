@@ -16,9 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../../../public/img/tenedores.png);  
+    background-image: url(../../../public/img/tenedores.png);
     background-repeat: repeat;
-    /* background-size: cover; */
     background-size: contain;
 }
 
@@ -41,7 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2em; 
+    margin-top: 2em;
     margin-bottom: 2em;
     row-gap: 3em;
     column-gap: 3em;
@@ -62,7 +61,7 @@
     column-gap: 1em;
     cursor: pointer;
     color: antiquewhite;
-   
+
 }
 
 .bloque1Tipos1 {

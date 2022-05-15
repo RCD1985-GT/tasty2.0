@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 const Admin = (props) => {
-  
+
   // Variables locales
   let navigate = useNavigate();
 
@@ -34,19 +34,13 @@ const Admin = (props) => {
   return (
 
     <div className="diseñoAdmin">
-
       <div className="contenedorAdmin">
-
         <div className="dato" onClick={() => navegar1("/adminVerUsuarios")}>VER USUARIOS</div>
-
         <div className="dato" onClick={() => navegar2("/adminVerRecetas")}>VER RECETAS</div>
-
         <div className="dato" onClick={() => navegar3("/adminCrearReceta")}>NUEVA RECETA</div>
-
       </div>
     </div>
   );
-
 };
 
 export default connect((state) => ({

@@ -69,31 +69,23 @@ const DetallesReceta = (props) => {
 
 		return (
 			<div className="diseñoDetallesRecetas">
-				 
-				 <div className="contenedorInfo"></div>
-				<div className="cardReceta">
-
 				<div className="contenedorInfo"></div>
+				<div className="cardReceta">
+					<div className="contenedorInfo"></div>
 					<div className="cardRecetaIzquierda">
 						<div className="cardRecetaIzquierdaFoto">{props.detalles?.poster}</div>
 						<div className="cardRecetaIzquierdaTitulo">{props.detalles?.titulo}</div>
-						
 					</div>
-
 					<div className="cardRecetaDerecha">
-						
 						<div className="cardRecetaDerechaIngredientes">Ingredientes: {props.detalles?.ingredientes}</div>
 						<div className="cardRecetaDerechaPreparacion">Preparación:{props.detalles?.preparacion}</div>
-
 						<button className='botonGuardar' onClick={() => guardarReceta()}>Guardar</button>
 					</div>
 				</div>
-				
 				<div className="contenedorInfo"></div>
 			</div>
 		)
 	}
-
 };
 
 export default connect((state) => ({

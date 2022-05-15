@@ -3,7 +3,6 @@ import './Footer.css';
 
 const Footer = () => {
 	return (
-
 		<div className="contenedorFooter">
 			<div className="contenidoFooter">
 				<div className="iconosFooter">
@@ -11,11 +10,6 @@ const Footer = () => {
 					<div className="iconoInstagram"></div>
 					<div className="iconoTwitter"></div>
 				</div>
-			
-			
-			{/* <div className="contactoFooter">
-				<a className='contacto' href="#"> Contacto</a>
-			</div> */}
 			</div>	
 		</div>
 	);

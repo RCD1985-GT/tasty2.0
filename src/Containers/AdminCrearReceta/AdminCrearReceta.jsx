@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import './AdminCrearReceta.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AdminCrearReceta = (props) => {
     console.log("entro en AdminCrearRecetas")
 
-   // Variables locales
-   let navigate = useNavigate();
+    // Variables locales
+    let navigate = useNavigate();
 
     // Hook
     const [datosUsuario, setDatosUsuario] = useState({
@@ -39,7 +39,7 @@ const AdminCrearReceta = (props) => {
 
     // Funcion traer recetas
     const crearReceta = async () => {
-      
+
         let config = {
             headers: { Authorization: `Bearer ${props.credenciales.token}` }
         };
@@ -52,46 +52,44 @@ const AdminCrearReceta = (props) => {
             preparacion: datosUsuario.preparacion,
         }
 
-       
         try {
 
-             await axios.post(`http://localhost:3300/recetas/${props.credenciales.usuario.id}`, body, config);
+            await axios.post(`http://localhost:3300/recetas/${props.credenciales.usuario.id}`, body, config);
             navigate('/admin');
 
         } catch (error) {
             console.log(error);
         }
     }
-// NO ENTRA AQUI
+    // NO ENTRA AQUI
     if (props.credenciales?.usuario.rol === true) {
-        
+
         return (
             <div className='diseñoCrearReceta'>
-             
-            <div className="diseñoFormularioCrear">
-                <div className="arribaCrear">CREA AQUI LA RECETA</div>
-                <div className="medioCrear">
-                    {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
-                    <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:"onChange={(e) => { rellenarDatos(e) }}
- />
-                    <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" onChange={(e) => { rellenarDatos(e) }}
-/>
-                    <input type="text" name="tipo" id="tipo" title="tipo" placeholder="tipo:" onChange={(e) => { rellenarDatos(e) }}
-/>                    
-                    <textarea name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:"onChange={(e) => { rellenarDatos(e) }}></textarea>    
 
-                    <textarea name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion:"onChange={(e) => { rellenarDatos(e) }}></textarea>                          
-                </div>
-                <div className="abajoRegistro">
-                    {/* {msgError} */}
-                    <div className="botoncrear" onClick={()=>crearReceta()}>
-                        GUARDAR
+                <div className="diseñoFormularioCrear">
+                    <div className="arribaCrear">CREA AQUI LA RECETA</div>
+                    <div className="medioCrear">
+                        {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
+                        <input type="poster" name="poster" id="poster" title="poster" placeholder="poster:" onChange={(e) => { rellenarDatos(e) }}
+                        />
+                        <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" onChange={(e) => { rellenarDatos(e) }}
+                        />
+                        <input type="text" name="tipo" id="tipo" title="tipo" placeholder="tipo:" onChange={(e) => { rellenarDatos(e) }}
+                        />
+                        <textarea name="ingredientes" id="ingredientes" title="ingredientes" placeholder="ingredientes:" onChange={(e) => { rellenarDatos(e) }}></textarea>
+
+                        <textarea name="preparacion" id="preparacion" title="preparacion" placeholder="preparacion:" onChange={(e) => { rellenarDatos(e) }}></textarea>
+                    </div>
+                    <div className="abajoRegistro">
+                        {/* {msgError} */}
+                        <div className="botoncrear" onClick={() => crearReceta()}>
+                            GUARDAR
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         )
-
     } else {
         return (
             <div className="diseñoCrearReceta">

@@ -51,8 +51,6 @@ const AdminVerRecetas = (props) => {
                             <p className="receta">{receta.poster}</p>
                             <p className="receta">{receta.titulo}</p>
                             <p className="receta">{receta.tipo}</p>
-                            {/* <p className="receta">{receta.ingredientes}</p>
-                            <p className="receta">{receta.preparacion}</p> */}
                         </div>
                     )
                 })
@@ -69,7 +67,6 @@ const AdminVerRecetas = (props) => {
         );
     }
 };
-
 
 export default connect((state) => ({
     credenciales: state.credenciales
