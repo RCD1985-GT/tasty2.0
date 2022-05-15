@@ -31,7 +31,6 @@ const Tipo = (props) => {
 
     // Funcion que trae recetas segun el tipo  ....${props.tipo}
     const traeTipo = async () => {
-        console.log("entro enfuncion que trae tipo")
         try {
 
             let resultado = await axios.get(`http://localhost:3300/recetas/${props.tipo}`);
