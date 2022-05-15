@@ -4,20 +4,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: #060613;
-}
-
-.diseñoDetallesRecetas2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
     background-color: #060613;
 }
+
+
 .cardReceta {
     
     display: flex;
