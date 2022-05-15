@@ -25,11 +25,7 @@ const Tipo = (props) => {
 
     // Funcion escoger receta
     const escogeReceta = (receta) => {
-        console.log(receta);
-        //Guardamos la receta escogida en REDUX 
-        props.dispatch({ type: DETALLES, payload: receta });
-        console.log("receta guardada en Redux")
-        // y redirigimos a la vista de detalles Receta con navigate
+         props.dispatch({ type: DETALLES, payload: receta });
         navigate("/detallesReceta");
     }
 
@@ -39,10 +35,8 @@ const Tipo = (props) => {
         try {
 
             let resultado = await axios.get(`http://localhost:3300/recetas/${props.tipo}`);
-            console.log(resultado)
             setRecetas(resultado.data);
-            console.log("recetas recibidas y guardadas en Hook", props.tipo)
-
+            
         } catch (error) {
             console.log(error);
         }
