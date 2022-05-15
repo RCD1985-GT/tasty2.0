@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+#Tasty Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consiste en la realización de un Frontend donde he utilizado React como libreria de JS, Redux para manejar los estados y Axios para hacer las llamadas a la API..
 
-## Available Scripts
+#Pre-requisitos 📋
+Necesitaremos la instalación de un programa para realizar nuestro código, en este proyecto se ha utilizado Visual studio code,
 
-In the project directory, you can run:
+#Tecnologías utilizadas 🚀
+El proyecto ha sido desarrollado utilizando los siguientes paquetes:
 
-### `npm start`
+Axios
+React
+React-dom
+React-redux
+React-router-dom
+React-scripts
+Redux
+Redux-localstorage-simple
+Web-vitals
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#¿Como desplegar el proyecto? 📋
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sigue las instrucciones para clonar el proyecto en local:
 
-### `npm test`
+- git clone url del repositorio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sigue las instrucciones para instalar las depedencias necesarias:
 
-### `npm run build`
+- npm i
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sigue las instrucciones para iniciar el proyecto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Una vez hecho estos pasos hay que dirigirse al siguiente repositorio que corresponde al backend del proyecto
+https://github.com/RCD1985-GT/final_react.git y seguir las instrucciones.
 
-### `npm run eject`
+#Vistas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Preview
+Vista HOME:
+foto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Vista LOGIN:
+foto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Vista REGISTER:
+foto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Vista PERFIL:
+foto foto
 
-## Learn More
+VISTA ADMIN:
+foto foto foto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#Funcionalidad de la APP 🛠️
+En la app Tasty, podrás:
+- registrarte.
+- hacer Log In.
+- ver las recetas según el tipo y sus detalles y guardarla en tu perfil.
+- en la vista de perfil se puede ver los datos del ususario y acceder a las recetas previameente guardadas.
+- en la vista de Admin, se pueden ver los usuarios, las recetas y crear nuevas recetas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#Deploy:
+Puedes ver el front de la app en:
+https://master.d1znz4rzgnrp37.amplifyapp.com/
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Autores ✒️
+Rodrigo Campos
