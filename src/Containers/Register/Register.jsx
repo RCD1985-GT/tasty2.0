@@ -77,8 +77,8 @@ const Registro = () => {
 
         try {
 
-            let resultado = await axios.post("http://localhost:3300/usuarios/registro", body);
-           
+            await axios.post("http://localhost:3300/usuarios/registro", body);
+
             setTimeout(() => {
                 navigate("/login");
             }, 1000);

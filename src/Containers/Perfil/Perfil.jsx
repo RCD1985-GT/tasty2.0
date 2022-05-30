@@ -34,6 +34,33 @@ const Perfil = (props) => {
         navigate("/detallesReceta");
     }
 
+    // Funcion eliminar receta guardada
+    const eliminaReceta = async (id) => {
+
+        try {
+
+            let config = {
+                headers: { Authorization: `Bearer ${props.credenciales.token}` }
+            };
+
+            console.log("entro en eliminaReceta");
+
+            let res = await axios.delete(`http://localhost:3300/guardados/${id}`, config)
+            console.log( res.data)
+
+
+        } catch (error) {
+            console.log("error");
+        }
+
+    }
+    
+
+
+
+
+
+
     // Use effect 1
     useEffect(() => {
         if (props.credenciales.token === '') {
@@ -44,6 +71,7 @@ const Perfil = (props) => {
     // Use effect 2
     useEffect(() => {
     });
+
 
     // Funcion mostrar recetas guardadas
     const mostrarRecetasGuardadas = async () => {
@@ -78,6 +106,8 @@ const Perfil = (props) => {
                                     <p className="receta">{receta.titulo}</p>
                                     <p className="receta">{receta.tipo}</p>
                                     <div className="info" onClick={() => escogeReceta(receta)}>INFO</div>
+                                    <div className="eliminar" onClick={() => eliminaReceta(receta)}>ELIMINAR</div>
+
                                 </div>
                             )
                         })

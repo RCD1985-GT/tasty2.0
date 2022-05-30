@@ -45,6 +45,7 @@ const AdminCrearReceta = (props) => {
         };
 
         let body = {
+            usuarioId: props.credenciales.usuario.id,
             poster: datosUsuario.poster,
             titulo: datosUsuario.titulo,
             tipo: datosUsuario.tipo,
