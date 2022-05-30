@@ -13,8 +13,8 @@ import AdminVerUsuarios from './Containers/AdminVerUsuarios/AdminVerUsuarios';
 import AdminVerRecetas from './Containers/AdminVerRecetas/AdminVerRecetas';
 import AdminCrearReceta from './Containers/AdminCrearReceta/AdminCrearReceta';
 import DetallesReceta from './Containers/DetallesReceta/DetallesReceta';
-import ModificarReceta from './Containers/ModificarReceta/ModificarReceta';
-import EliminarReceta from './Containers/EliminarReceta/EliminarReceta';
+// import ModificarReceta from './Containers/ModificarReceta/ModificarReceta';
+// import EliminarReceta from './Containers/EliminarReceta/EliminarReceta';
 // import DetallesRecetaGuardada from './Containers/DetallesRecetaGuardada/DetallesRecetaGuardada';
 
 function App() {
@@ -34,8 +34,8 @@ function App() {
         <Route path="/adminCrearReceta" element={<AdminCrearReceta/>} />
         <Route path="/adminVerRecetas" element={<AdminVerRecetas/>} />
         <Route path="/detallesReceta" element={<DetallesReceta/>} />
-        <Route path="/modificarReceta" element={<ModificarReceta/>} />
-        <Route path="/eliminarReceta" element={<EliminarReceta/>} />
+        {/* <Route path="/modificarReceta" element={<ModificarReceta/>} />
+        <Route path="/eliminarReceta" element={<EliminarReceta/>} /> */}
 
         {/* <Route path="/detallesRecetaGuardada" element={<DetallesRecetaGuardada/>} /> */}
         </Routes>

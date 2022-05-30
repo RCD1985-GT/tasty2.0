@@ -6,6 +6,7 @@ import axios from 'axios';
 import './Tipo.css';
 import { DETALLES } from '../../redux/types';
 
+
 const Tipo = (props) => {
 
     // Navegar
@@ -30,16 +31,16 @@ const Tipo = (props) => {
     }
 
     // Funcion modificar receta
-    const modificarReceta = (receta) => {
-        props.dispatch({ type: DETALLES, payload: receta });
-        navigate("/modificarReceta");
-    }
+    // const modificarReceta = async (receta) => {
+    //     props.dispatch({ type: DETALLES, payload: receta });
+    //     navigate("/modificarReceta");
+    // }
 
     // Funcion borrar receta
-    const borrarReceta = (receta) => {
-        props.dispatch({ type: DETALLES, payload: receta });
-        navigate("/borrarReceta");
-    }
+    // const borrarReceta =  async (receta) => {
+    //     props.dispatch({ type: DETALLES, payload: receta });
+    //     navigate("/borrarReceta");
+    // }
 
 
     // Funcion que trae recetas segun el tipo  ....${props.tipo}
@@ -53,6 +54,9 @@ const Tipo = (props) => {
             console.log(error);
         }
     };
+
+    // SI ES ADMINISTRADOR
+    if (props.credenciales.usuario.rol === true){
     return (
 
         <div className="contenidoTipo">
@@ -73,8 +77,30 @@ const Tipo = (props) => {
             <div className="contenedorInfo"></div>
         </div>
     )
+    
+} else {
+    return (
+        <div className="contenidoTipo">
+            <div className="contenedorInfo"></div>
+            {recetas.map(item => {
+                return (
+                    <div className="itemTipo" key={item.id} >
+                        <div className="itemfoto">{item.poster}</div>
+                        <div className="itemTitulo">{item.titulo}</div>
+                        <div className="itemTitulo" onClick={() => escogeReceta(item)}>Ver Receta</div>
+                        {/* <div className="itemTitulo" onClick={() => modificarReceta(item)}>Modificar </div>
+                        <div className="itemTitulo"  onClick={() => borrarReceta(item)}>Borrar</div> */}
+                        
+                    </div>
+                )
+            })
+            }
+            <div className="contenedorInfo"></div>
+        </div> 
+    )
 }
-
+}
 export default connect((state) => ({
-    tipo: state.tipo
+    tipo: state.tipo,
+    credenciales: state.credenciales
 }))(Tipo);
