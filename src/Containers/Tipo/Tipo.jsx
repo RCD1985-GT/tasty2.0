@@ -31,16 +31,24 @@ const Tipo = (props) => {
     }
 
     // Funcion modificar receta
-    // const modificarReceta = async (receta) => {
-    //     props.dispatch({ type: DETALLES, payload: receta });
-    //     navigate("/modificarReceta");
-    // }
+
 
     // Funcion borrar receta
-    // const borrarReceta =  async (receta) => {
-    //     props.dispatch({ type: DETALLES, payload: receta });
-    //     navigate("/borrarReceta");
-    // }
+    const borrarReceta = async (id) => {
+
+        try {
+            let config = {
+                headers: { Authorization: `Bearer ${props.credenciales.token}` }
+            };
+
+            console.log(id);
+            let res = await axios.delete(`http://localhost:3000/eliminar/${id}`, config)
+            console.log(res.data)
+
+        } catch (error) {
+            console.log("error");
+        }
+    }
 
 
     // Funcion que trae recetas segun el tipo  ....${props.tipo}
@@ -56,51 +64,52 @@ const Tipo = (props) => {
     };
 
     // SI ES ADMINISTRADOR
-    if (props.credenciales.usuario.rol === true){
-    return (
+    if (props.credenciales.usuario.rol === true) {
+        return (
 
-        <div className="contenidoTipo">
-            <div className="contenedorInfo"></div>
-            {recetas.map(item => {
-                return (
-                    <div className="itemTipo" key={item.id} >
-                        <div className="itemfoto">{item.poster}</div>
-                        <div className="itemTitulo">{item.titulo}</div>
-                        <div className="itemTitulo" onClick={() => escogeReceta(item)}>Ver Receta</div>
-                        <div className="itemTitulo" onClick={() => modificarReceta(item)}>Modificar </div>
-                        <div className="itemTitulo"  onClick={() => borrarReceta(item)}>Borrar</div>
-                        
-                    </div>
-                )
-            })
-            }
-            <div className="contenedorInfo"></div>
-        </div>
-    )
-    
-} else {
-    return (
-        <div className="contenidoTipo">
-            <div className="contenedorInfo"></div>
-            {recetas.map(item => {
-                return (
-                    <div className="itemTipo" key={item.id} >
-                        <div className="itemfoto">{item.poster}</div>
-                        <div className="itemTitulo">{item.titulo}</div>
-                        <div className="itemTitulo" onClick={() => escogeReceta(item)}>Ver Receta</div>
-                        {/* <div className="itemTitulo" onClick={() => modificarReceta(item)}>Modificar </div>
+            <div className="contenidoTipo">
+                <div className="contenedorInfo"></div>
+                {recetas.map(item => {
+                    return (
+                        <div className="itemTipo" key={item.id} >
+                            <div className="itemfoto">{item.poster}</div>
+                            <div className="itemTitulo">{item.titulo}</div>
+                            <div className="itemTitulo" onClick={() => escogeReceta(item)}>Ver Receta</div>
+                            <div className="itemTitulo" >Modificar </div>
+                            <div className="itemTitulo" onClick={() => borrarReceta(item)}>Borrar</div>
+
+                        </div>
+                    )
+                })
+                }
+                <div className="contenedorInfo"></div>
+            </div>
+        )
+
+    } else {
+        return (
+            <div className="contenidoTipo">
+                <div className="contenedorInfo"></div>
+                {recetas.map(item => {
+                    return (
+                        <div className="itemTipo" key={item.id} >
+                            <div className="itemfoto">{item.poster}</div>
+                            <div className="itemTitulo">{item.titulo}</div>
+                            <div className="itemTitulo" onClick={() => escogeReceta(item)}>Ver Receta</div>
+                            {/* <div className="itemTitulo" onClick={() => modificarReceta(item)}>Modificar </div>
                         <div className="itemTitulo"  onClick={() => borrarReceta(item)}>Borrar</div> */}
-                        
-                    </div>
-                )
-            })
-            }
-            <div className="contenedorInfo"></div>
-        </div> 
-    )
-}
+
+                        </div>
+                    )
+                })
+                }
+                <div className="contenedorInfo"></div>
+            </div>
+        )
+    }
 }
 export default connect((state) => ({
     tipo: state.tipo,
-    credenciales: state.credenciales
+    credenciales: state.credenciales,
+    detalles: state.detalles
 }))(Tipo);

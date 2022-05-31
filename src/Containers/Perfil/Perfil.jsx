@@ -55,12 +55,6 @@ const Perfil = (props) => {
 
     }
     
-
-
-
-
-
-
     // Use effect 1
     useEffect(() => {
         if (props.credenciales.token === '') {
